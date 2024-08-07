@@ -1,0 +1,76 @@
+code to executable (c++):
+------------------------
+preprocessing --> compilation --> assembly --> linking --> loading
+
+source code --> include header / expanded code --> assembly language --> machine / object code --> executable code --> runnign program
+
+structure: object basics
+           has only behaviour
+
+function are a part of the object themselves in OOPs
+drive programs in c++
+
+in the later stages there are no syntactical errors faced (mostly)
+semantic errors and run-time errors will exist
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+code to executable (java):
+------------------------
+source code --> compiler --> bytecode (basically assembler - 'to bytes') --> virtual machine (VM)-based interpreter --> machine code
+
+compiler comes 'bundled' with the assembler
+
+everything is a pointer in java by default except few native data types
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+CISC: Complex Instruction Set Architecture
+
+RISC: Reduced Instruction Set Architecture
+      simpler, lengthier
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+code to executable (python):
+------------------------
+source code --> compiler --> bytecode --> python VM (input + library modules) --> executed code
+
+everything is a pointer, everything is an object in python by default. there are no native data types.
+
+very slow when compared to c
+
+interpreter (VM) does all the work (source code and input is fed in)
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+java is a hybrid of c and python
+
+segmentation fault: memory overflow and accessing memory out-of-bounds
+
+in java, no SegmentationFault. only DivideByZero.
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+procedural programming to OOPs:
+------------------------------
+procedural: functions are the major focus
+            it is function-dependent (not data dependent)
+
+when collaborating, structure and function should be added together.
+not in OOPs
+
+OOPs: data is the major focus
+      it is data-dependent
+      data and functions are encapsulated
+
+      class: data type
+      object: data
+
+properties: physical dimensions / features that describe an object
+            stored in variables / attributes
+            defined in class code block (not in method)
+behaviour: actions performed by an object
+           stored in methods
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
