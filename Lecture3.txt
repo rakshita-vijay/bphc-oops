@@ -1,0 +1,11 @@
+making an object from a class:
+-----------------------------
+access_modifier class <class_name> {
+  data member;
+  method;
+  constructor;
+  nested class;
+  interface;
+}
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*

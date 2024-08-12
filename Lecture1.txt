@@ -20,7 +20,7 @@ semantic errors and run-time errors will exist
 // ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
 
 code to executable (java):
-------------------------
+-------------------------
 source code --> compiler --> bytecode (basically assembler - 'to bytes') --> virtual machine (VM)-based interpreter --> machine code
 
 compiler comes 'bundled' with the assembler
@@ -37,7 +37,7 @@ RISC: Reduced Instruction Set Architecture
 // ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
 
 code to executable (python):
-------------------------
+---------------------------
 source code --> compiler --> bytecode --> python VM (input + library modules) --> executed code
 
 everything is a pointer, everything is an object in python by default. there are no native data types.

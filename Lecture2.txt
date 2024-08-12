@@ -1,0 +1,50 @@
+classes: made up of objects
+         extension of the idea of structures
+         user-defined datatypes
+
+         C++: classes are optional
+         Java: everything including the Main function has to be inside a class
+               Objects interact through messages and have data bundled into them
+         python: no class, everything is an object
+
+python is based on C, not on java; though inspirations are taken from java (due to chronological order)
+
+procedural programming: linear execution, no parallel execution
+                        data is stored as local and global variables
+
+                        modularization: based on functions, not data
+                        code reusability: minimum, as functions are standalone entities
+
+OOPs is more of a philosophy and practicality, than possibility.
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+OOPs concepts:
+-------------
+
+inheritance: merging together and specializing certain properties (parent --> child)
+
+polymorphism: through method overloading / overriding (in OOPs)
+              through functions with different parameters (if-else, etc)
+
+encapsulation: public / private tags says whether data / methods is exposed to other classes
+               helps with debugging
+
+abstraction: a need-to-know basis - essential aspects needed to function
+             interfaces make things easier - input given / output received
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+flexibility / scalability : java better for larger, more complex systems.
+                            encapsulation helps with debugging, but complexity: java > c
+
+static: unless you cast, type remains unchanged
+        memory management done by Automatic Garbage Collection (unlike c, where this causes memory leaks)
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+Generics in Java not very well implemented.
+Fails in handling unsigned integers
+Floating point numbers not well represented (0.7 is the Devil manifested) (All coding languages)
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
