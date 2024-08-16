@@ -31,7 +31,7 @@ everything is a pointer in java by default except few native data types
 
 CISC: Complex Instruction Set Architecture
 
-RISC: Reduced Instruction Set Architecture
+RISC: Reduced Instruction Set Architecture;
       simpler, lengthier
 
 // ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
@@ -58,23 +58,23 @@ in java, no SegmentationFault. only DivideByZero.
 
 procedural programming to OOPs:
 ------------------------------
-procedural: functions are the major focus
+procedural: functions are the major focus;
             it is function-dependent (not data dependent)
 
 when collaborating, structure and function should be added together.
 not in OOPs
 
-OOPs: data is the major focus
-      it is data-dependent
+OOPs: data is the major focus;
+      it is data-dependent;
       data and functions are encapsulated
 
       class: data type
       object: data
 
-properties: physical dimensions / features that describe an object
-            stored in variables / attributes
+properties: physical dimensions / features that describe an object;
+            stored in variables / attributes;
             defined in class code block (not in method)
-behaviour: actions performed by an object
+behaviour: actions performed by an object;
            stored in methods
 
 // ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*

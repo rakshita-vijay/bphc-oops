@@ -1,0 +1,4 @@
+final class: declared using 'final'
+             once declared, is constant throughout the program
+             only way to make a class immutable
+             cannot be extended

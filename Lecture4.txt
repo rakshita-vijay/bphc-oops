@@ -1,0 +1,45 @@
+Creating an object of a class:
+-----------------------------
+1) 'new' keyword: Object <variable> = new Object();
+                                            |
+                                            V
+                                   default constructor
+
+2) Class.forName("<String className>"): Object obj = (Object) Class.forName("<String className>").newInstance();
+
+3) clone() method: Object obj1 = new Object();
+                   Object obj2 = (Object) obj1.clone();
+
+                   creates 2 objects with 2 different references - checker: .equals()
+
+4) deserialization: reading an object from the saved state in a file
+
+                    FileInputStream file = new FileInputStream(fileName);
+                    ObjectInputStream in = new ObjectInputStream(file);
+                    Object obj = in.readObject();
+
+5) anonymous objects: used for immediate method calls
+                      destroyed after method calling
+
+                      ex: EventHandler()
+
+                      btn.setOnAction(new EventHandler() {   // btn = button
+                        public void handle(ActionEvent event) {
+                          System.out.println("Hello world!");
+                        }
+                      });
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+identifier of a java object: #
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+static class: has only static members;
+              cannot access non-static members outside the class; non-static members can call the static class;
+
+              only possible if nested class;
+              instances of static class cannot be created;
+              provides outline of inherited class
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*

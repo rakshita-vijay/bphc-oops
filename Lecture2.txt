@@ -1,15 +1,15 @@
-classes: made up of objects
-         extension of the idea of structures
+classes: made up of objects;
+         extension of the idea of structures;
          user-defined datatypes
 
          C++: classes are optional
-         Java: everything including the Main function has to be inside a class
+         Java: everything including the Main function has to be inside a class;
                Objects interact through messages and have data bundled into them
          python: no class, everything is an object
 
 python is based on C, not on java; though inspirations are taken from java (due to chronological order)
 
-procedural programming: linear execution, no parallel execution
+procedural programming: linear execution, no parallel execution;
                         data is stored as local and global variables
 
                         modularization: based on functions, not data
@@ -21,24 +21,28 @@ OOPs is more of a philosophy and practicality, than possibility.
 
 OOPs concepts:
 -------------
+inheritance: 'IS A' relationship;
+             merging together and specializing certain properties (parent --> child)
 
-inheritance: merging together and specializing certain properties (parent --> child)
+composition: 'HAS A' relationship;
+             combination of classes work as a single object, classes share attributes, don't inherit it from parent class;
+             usually has a parent class where private objects of other classes are given
 
-polymorphism: through method overloading / overriding (in OOPs)
+polymorphism: through method overloading / overriding (in OOPs);
               through functions with different parameters (if-else, etc)
 
-encapsulation: public / private tags says whether data / methods is exposed to other classes
+encapsulation: public / private tags says whether data / methods is exposed to other classes;
                helps with debugging
 
-abstraction: a need-to-know basis - essential aspects needed to function
+abstraction: a need-to-know basis - essential aspects needed to function;
              interfaces make things easier - input given / output received
 
 // ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
 
-flexibility / scalability : java better for larger, more complex systems.
+flexibility / scalability : java better for larger, more complex systems;
                             encapsulation helps with debugging, but complexity: java > c
 
-static: unless you cast, type remains unchanged
+static: unless you cast, type remains unchanged;
         memory management done by Automatic Garbage Collection (unlike c, where this causes memory leaks)
 
 // ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
