@@ -2,3 +2,58 @@ final class: declared using 'final'
              once declared, is constant throughout the program
              only way to make a class immutable
              cannot be extended
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+abstract class: to make generalized classes
+                declared using 'abstract'
+
+                template, loose coupling, code reusability, code reusability, abstraction, dynamic resolution
+                loose coupling - more paths to take by user
+
+                cannot create instance of abstract class, it can be a subclass
+                data hiding possible with ac
+                must have atleast 1 abstract method
+
+                function definition not required, can be written as fun(){}
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+interface: has required method names for job
+implementer: provides body to the methods
+
+abstract class: provides different number of known classes to different implementers to work on different things
+
+interface: everything is declared, nothing is defined
+abstract class: some are declared, some are defined
+class: nothing is declared, everything is defined
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+concrete class: regular java classes;
+                have properties, functions;
+                derived class that provides basic implementations for all methods not implemented in base class
+
+singleton class: has only an object at a time;
+                 if second instance is to be implemented, it points to the first;
+                 controls access while dealing with database connection and socket programming
+
+                            socket programming: way of connecting two nodes on a network to communicate with each other
+
+                 how to create sc? : create a private constructor
+                                     create a static method that returns the object of the sc
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+POJO: Plain Old Java Object;
+      contains only private variables, setters and getters;
+      used to define java objects that increase reusability and readability of a java program;
+      provides encapsulation;
+      does not extend predefined classes;
+      constructors not required;
+      cannot implement pre-defined interfaces
+
+      instance variables: always private
+      getters and setters: always public
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
