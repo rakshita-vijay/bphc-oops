@@ -1,0 +1,37 @@
+inner class: class within a class, nested
+             groups classes, encapsulates
+             outer class members (including private) can be accessed by inner class
+
+static nested class: a class that is static and nested
+                     interacts with instance members of outer class
+                     syntax to create an object of static nested class:
+                                               OuterClass.StaticNestedClass nestedObject = new OuterClass.StaticNestedClass();
+
+non-static nested class:
+
+local inner class: type of inner class that is defined inside a block (method body - group of statements enclosed by a pair of braces)
+                   non-static, can access the instance members of the block
+????????
+
+anonymous inner classes: same as local classes, but class does not have a className, so only a single object is created of the class
+                         makes code more concise
+
+wrapper class: turns native things (primitive things) into objects (objectifies items as it is wrong irl :P)
+               for each primitive type, there is a corresponding wrapper class
+
+               primitive data type: all small
+               wrapper class for the primitive data type: first letter in caps
+
+               java auto-boxes primitive objects by wrapper classes to wrapper object
+               primitive object --> boxing --> wrapper object
+               wrapper object --> unboxing --> primitive object
+
+
+primitive data types: boolean (1 bit; true and false - not True and False);
+                      char (2 bytes);
+                      float (4), double (8);
+                      byte (1), short (2), int (4), long (8)
+
+non-primitive data type: arrays, annotations, strings, classes, interfaces, enums, objects
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
