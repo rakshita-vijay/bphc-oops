@@ -7,11 +7,14 @@ static nested class: a class that is static and nested
                      syntax to create an object of static nested class:
                                                OuterClass.StaticNestedClass nestedObject = new OuterClass.StaticNestedClass();
 
-non-static nested class:
+non-static nested class: a class that is not static and nested
+?????????
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
 
 local inner class: type of inner class that is defined inside a block (method body - group of statements enclosed by a pair of braces)
                    non-static, can access the instance members of the block
-????????
+?????????
 
 anonymous inner classes: same as local classes, but class does not have a className, so only a single object is created of the class
                          makes code more concise

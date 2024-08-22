@@ -1,0 +1,30 @@
+object model: encourages reuse of software
+              produces systems that are built upon stable intermediates
+              reduce the inherent overhead
+
+jvm: classical interpreter
+
+object: has state, behaviour, identity
+
+OOPs organizes its program around data (objects), and a set of well-defined interfaces to that data
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+student --> hostel
+   |
+   |
+   V
+courses <-- faculty
+
+OOPs has a bottom-down approach, going for the smaller data first, and then organizing it
+reduces complexity
+
+data abstraction: reduces complexity by hiding things
+
+access specifiers protects code inside it
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+toString() - in class String
+
+all objects for a class are not allotted memory for the methods defined in a class
