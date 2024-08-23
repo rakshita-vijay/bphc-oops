@@ -1,0 +1,49 @@
+inheritance: one object acquires all the properties and behaviours of parent object;
+             'IS-A' relationship;
+             used for method overriding (for runtime polymorphism)
+                  for code reusability
+
+             sub-class: class which inherits parent class
+                        aka derived, extended, child class
+
+             super-class: class from which sub-class inherits features
+                          aka base, parent class
+
+             reusability: ability to reuse fields and methods already defined in previous classes
+             thus, saves space
+
+             overriding
+
+             done using 'extends': makes new class from existing class
+
+             implements: implementing the contract asked by the existing class
+                         ex: child implementing parent's dream
+
+method overriding: n methods in n classes with same name, same parameters and same return type
+                   (defining method in child class which exists in parent class, with same signature);
+                   methods can be overridden only in child/sub classes;
+                   possible with instance methods;
+                   AKA run-time polymorphism and dynamic method dispatch
+
+types of inheritance: single (p --> c),
+                      multilevel (p1 --> p2 --> c),
+                      hierarchial (c1 <-- p --> c2),
+
+invalid types: multiple (p1 --> c <-- p2),
+               hybrid (p1 --> p2
+                       |      |
+                       |      |
+                       V      V
+                       p3 --> c)
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+EXPERIMENT: suppose you have multiple interfaces with the same function name. try implementing and extending
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+interface can extend multiple interfaces
+classes can implement 2 interfaces
+don't have too much abstraction
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
