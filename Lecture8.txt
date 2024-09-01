@@ -1,0 +1,18 @@
+abstraction:
+        abstract classes: some functions are overridden, some are implemented
+
+interface is used to achieve abstraction, mutliple inheritance (ps ~vm~ var)
+in java interface, only abstract methods, not method body
+'IS-A' relationship
+cannot be instantiated just like abstract class
+now we have default (8), static (8), and private (9) methods
+
+public static variables - default
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+interface to interface - implement
+interface to class - implement
+class to class - extends
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*

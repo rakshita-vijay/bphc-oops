@@ -1,0 +1,7 @@
+System.gc(); - suggestion to do garbage collection
+
+local variables are initialized first, before the constructor is called
+
+inner class cannot declare static variables when the inner class is not static
+
+java does not allow unreachable code - it is aware of people's energy exhaustion

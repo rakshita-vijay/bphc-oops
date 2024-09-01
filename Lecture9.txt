@@ -1,0 +1,18 @@
+can allocate a[2] before a[0 or 1] in java
+keep track using exception handling
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+list:
+----
+List<A> listA = new ArrayList<A>();
+(or)
+ArrayList<A> listA = new ArrayList<A>();
+
+listA.at(&index); - jumps to index
+
+if(listA.hasNext) {
+  listA.next;
+}
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*

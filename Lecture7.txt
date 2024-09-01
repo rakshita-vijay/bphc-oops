@@ -44,6 +44,7 @@ EXPERIMENT: suppose you have multiple interfaces with the same function name. tr
 
 interface can extend multiple interfaces
 classes can implement 2 interfaces
-don't have too much abstraction
+don't have too much abstraction - too many calls
+don't have too less abstraction - maintenance problem (too long to find bugs)
 
 // ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
