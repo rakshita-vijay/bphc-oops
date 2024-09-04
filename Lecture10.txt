@@ -1,0 +1,31 @@
+can the two sets exist alone, individually?
+yes: aggregation
+no: composition
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+composition: 'whole-part' relationship
+             parts cannot exist independently outside the whole
+             stronger form of association than aggregation
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+                                    aggregation                 composition
+strength:                           weak                        strong
+relationship:                       has-a / uses-a              whole-part
+independent existence of objects:   possible                    not possible
+ownership:                          no, no encapsulation        yes, strong encapsulation
+if parent destroyed, components:    not destroyed               destroyed
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+polymorphism: compile-time and run-time
+              over-loading and over-riding
+              here, we focus on run-time
+
+compile-time polymorphism: early by-ending
+                           over-loading - different signatures
+
+run-time polymorphism: late by-ending
+                       over-riding - same signature
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*

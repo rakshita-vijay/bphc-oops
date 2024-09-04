@@ -16,3 +16,22 @@ if(listA.hasNext) {
 }
 
 // ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+method: abstract, public
+variable: public, static, final
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+tagger / nested interface:
+-------------------------
+tagger: no function to override
+        Serializable, Cloneable, Remote
+
+nested interface: works like inner class
+
+aggregation: 'HAS-A' relationship
+             intersection of sets
+
+composition: one thing is the subset of another
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
