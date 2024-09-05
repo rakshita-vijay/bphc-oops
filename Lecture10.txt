@@ -19,13 +19,13 @@ if parent destroyed, components:    not destroyed               destroyed
 // ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
 
 polymorphism: compile-time and run-time
-              over-loading and over-riding
+              overloading and overriding
               here, we focus on run-time
 
 compile-time polymorphism: early by-ending
-                           over-loading - different signatures
+                           overloading - different signatures, same class
 
 run-time polymorphism: late by-ending
-                       over-riding - same signature
+                       overriding - same signature, different classes
 
 // ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
