@@ -1,0 +1,13 @@
+return this; - can return superclass Object
+
+subclass cannot see a private method in superclass
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+java does not allow variables to be overridden
+making them final does not prevent them from being reimplemented in a subclass
+
+overriding methods - subclass precedence, instance type
+overriding variables - superclass precedence, reference type
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
