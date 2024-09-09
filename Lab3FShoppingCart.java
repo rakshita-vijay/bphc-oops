@@ -1,6 +1,6 @@
-public class Lecture11FShoppingCart {
+public class Lab3FShoppingCart {
   public static void main(String[] args) {
-    Lecture11GProduct prod1 = new Lecture11GProduct();
+    Lab3GProduct prod1 = new Lab3GProduct();
 
     System.out.println(prod1.toString());
     System.out.println();

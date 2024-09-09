@@ -1,4 +1,4 @@
-public class Lecture11EBankAccount {
+public class Lab3EBankAccount {
   private static int accountNumber = 5;
   private static int balance = 7;
 

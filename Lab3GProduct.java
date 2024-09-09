@@ -1,15 +1,15 @@
-public class Lecture11GProduct {
+public class Lab3GProduct {
   private String productName;
   private double price;
   private int quantity;
 
-  public Lecture11GProduct() {
+  public Lab3GProduct() {
     productName = ".";
     price = 0.0;
     quantity = 0;
   }
 
-  public Lecture11GProduct(String productName, double price, int quantity) {
+  public Lab3GProduct(String productName, double price, int quantity) {
     this.productName = productName;
     this.price = price;
     this.quantity = quantity;

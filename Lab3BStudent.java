@@ -1,7 +1,7 @@
-public class Lecture11BStudent {
+public class Lab3BStudent {
   static int totalStudents = 0;
 
-  public Lecture11BStudent() {
+  public Lab3BStudent() {
     totalStudents++;
   }
 

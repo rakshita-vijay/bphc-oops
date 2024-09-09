@@ -1,0 +1,74 @@
+UML: Unified Modelling Language
+OCL: Object Constraint Language
+     used to simulate working UML of a software
+
+structure diagrams: represents static aspects of the system
+                    emphasizes essential aspects of system being modeled
+                    used in documenting software architechture of software systems
+                    ex: class diagrams
+
+behaviour diagrams: represents dynamic aspects of the system
+                    emphasizes what must happen in the system being modeled
+                    used to describe functionality of software systems
+
+interaction diagrams: subset of behaviour diagrams
+                      emphasize flow of control and data among things in system being modeled
+                      ex: sequence diagram
+
+class diagrams: main building block of Object Oriented Modeling
+                general conceptual modeling of application structure
+                detailed modeling, translating models into programming code
+
+                represented in a box: top compartment - class name in bold, centered, sentence case
+                                      middle compartment - attributes, left-aligned, with data type
+                                      bottom compartment - methods, left aligned, with return type
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+visibility:
+----------
++ - public
+- - private
+# - protected
+~ - package
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+relationships:
+-------------
+------ : association
+------> : navigable association
+------|> : inheritance
+- - - - - -|> : realization / implementation
+- - - - - -> : dependency
+------<> : aggregation
+------<|> : composition (filled in diamond)
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+multiplicity:
+------------
+0 : no instances (rare)
+0..1 : no instances or one instance
+1 : exactly one instance
+1..1 : exactly one instance
+0..* : zero or more instances
+* : zero or more instances
+1..* : zero or more instances
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+component diagrams: depicts how components are wired together to form larger components / software systems
+                    used to illustrate structure of arbitrarily complex systems
+                    uses ball sockets and wires to connect boxes
+
+composite structure diagrams: type of static stucture diagrams
+                              shows internal structure of class, and collabs that this structure makes possible
+                              uses parts, ports, connectors
+
+deployment diagrams: specifies constructs that are used to define execution architechture of systems and assignment of software artifacts to software systems
+                     nodes: hardware
+                     artifacts: software
+                     shows what artifacts work on which node(s), and how different pieces are connected
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
