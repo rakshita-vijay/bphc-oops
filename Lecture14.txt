@@ -1,0 +1,35 @@
+package diagrams: use packages containing use cases to illustrate functionality of software system
+                  leaves use import
+
+profile diagrams: operates at metamodel level to show stereotypes as classes with <<stereotype>> stereotype,
+                                                  and profiles as pakcages with <<profile>> stereotype
+                  packages represent layered architechture of software system
+                  dependencies adorned with labels / stereotypes to indicate communication
+
+activity diagrams: beefed up version of flowchart
+                   show overall control flow
+
+state machine diagram: AKA statechart or state transition diagram
+                       shows order of states underwent by object in system
+                       captures software system's behaviour
+                       models behaviour of class, subsystem, package, complete system
+                       end up at turing diagram
+
+use case diagrams: graphical representation of a user's possible interactions with the system
+                   only when multiple user
+
+communication diagrams: interactions between objects and parts in terms of sequenced messages
+                        very rare
+                        describes both static structure and dynamic behaviour of a system
+
+interaction diagrams: type of communication diagram, looks like flowchart
+                      each activity is a frame which can contain a nested interaction diagram
+                      semi-rare, redundant
+
+sequence diagrams: AKA event diagrams or event scenarios
+                   shows process interactions arranged in time sequence
+                   depicts processes, objects involved, and sequence of messages exchanged as needed to carry out functionality
+
+timing diagrams: explore object behaviour through a given period of time
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*

@@ -1,6 +1,11 @@
 UML: Unified Modelling Language
+     used to depict ideas in OOPs pardigm (visual ML, not programming language)
 OCL: Object Constraint Language
+     defines rules for model elements
      used to simulate working UML of a software
+     tells you if your design is feasible, as per your constraints
+
+plant UML: used to draw big UML very easily
 
 structure diagrams: represents static aspects of the system
                     emphasizes essential aspects of system being modeled

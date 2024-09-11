@@ -19,7 +19,7 @@ public class TestFormFibonacci {
     int swapNum;
     int index = 2;
 
-    for (int count = 0; ; count++) {
+    for (;;) {
       swapNum = fibonacciArray.get(index - 1) + fibonacciArray.get(index - 2);
       if (swapNum > lastElement) {
         break;

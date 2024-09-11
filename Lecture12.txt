@@ -1,1 +1,49 @@
-aggregation:
+private constructor: used to realize the concept of singleton class
+
+inherited stuff cannot be more restrictive
+we can increase the scope, but we can't reduce it
+                    (a secret can be shared with more people, but we cannot reduce the number of people who know)
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+message passing: allows objects to interact with each other by invoking methods and passing data between each other
+                 majorly used to perform operations
+                 can be done by reference and by value
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+keywords:
+--------
+assert: also there in python
+        checks whether a condition is met or not
+
+try: starts a code block that checks for errors
+catch: catches errors caught by try block
+       generic: 'Exception e' - superclass of everything; not caring what problem, just that problem exists
+
+enum: enumerated data type
+
+final: variable holds constant value, cannot be overridden
+finally: block of code after try-catch that will be executed irrespective of try / catch being executed
+
+instanceof: indicates whether an object is an instance of a specific class or implements an interface
+
+native: can write platform-specific code
+
+null: indicates a reference that does not refer to anything
+
+strictfp: restricts precision and float rounding
+
+synchronized: used in threading
+              locking mechanism to avoid multi-person usage of certain sections of code (critical sections)
+
+throw: creates an exception
+throws: indicates what exceptions may be thrown by a method
+
+volatile: variable may change asynchronously
+
+sealed: restricts which classes can extend it (specified)
+
+NOTE: 'java' is not a keyword in java
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
