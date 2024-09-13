@@ -15,4 +15,6 @@ interface to interface - implement
 interface to class - implement
 class to class - extends
 
+decision makers: interfaces
+
 // ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
