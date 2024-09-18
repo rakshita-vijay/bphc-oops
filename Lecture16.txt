@@ -1,0 +1,29 @@
+builder design pattern: creational pattern used in software design to construct complex objects step-by-step
+                        separates construction of objects from its representation
+
+prototype: creational pattern that enables creation of new objects by copying an existing object
+           allows us to hide the complexity of making new instances from the client
+           existing object acts as the prototype and contains the state of the object
+
+adapter: structural pattern that allows the interface of an existing class to be used as another interface
+         acts as a bridge between 2 incompatible interfaces
+         it is a single class
+         ex: backward adaptability
+
+bridge: structural pattern that allows you to separate the abstraction from implementation, i.e., develpoed independently
+        abstraction: interface / abstract class, contains a reference to the implementer
+        implementer: interface / abstract class
+        use judiciously
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+vararg: variable argument
+        there cannot be 2 varargs in a function definition
+        ex: functionnn(int a, int b, int ... c)
+            ...
+            functionnn(4, 5, 6, 7, 8, 9)
+            this is:- a = 4
+                      b = 5
+                      c = [6, 7, 8, 9]
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
