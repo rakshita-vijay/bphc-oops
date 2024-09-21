@@ -1,0 +1,16 @@
+all fields in interface are implicitly final
+static fields must be initialized
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+FileOutputStream is a child OutputStream
+
+in an interface methods are public by default
+
+when 'parentClass var = new childClass();'
+variables are mapped to parentClass
+methods are mapped to childClass
+
+polymorphism is for instance methods, not instance variables
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
