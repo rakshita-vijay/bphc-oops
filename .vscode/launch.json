@@ -1,0 +1,84 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Current File",
+      "request": "launch",
+      "mainClass": "${file}"
+    },
+    {
+      "type": "java",
+      "name": "Lab3ATestStatic",
+      "request": "launch",
+      "mainClass": "Lab3ATestStatic",
+      "projectName": "bphc-oops_80699a6b"
+    },
+    {
+      "type": "java",
+      "name": "Lab3CCalculator",
+      "request": "launch",
+      "mainClass": "Lab3CCalculator",
+      "projectName": "bphc-oops_80699a6b"
+    },
+    {
+      "type": "java",
+      "name": "Lab3DBankTest",
+      "request": "launch",
+      "mainClass": "Lab3DBankTest",
+      "projectName": "bphc-oops_80699a6b"
+    },
+    {
+      "type": "java",
+      "name": "Lab3FShoppingCart",
+      "request": "launch",
+      "mainClass": "Lab3FShoppingCart",
+      "projectName": "bphc-oops_80699a6b"
+    },
+    {
+      "type": "java",
+      "name": "Lab4AVehicleTest",
+      "request": "launch",
+      "mainClass": "Lab4AVehicleTest",
+      "projectName": "bphc-oops_80699a6b"
+    },
+    {
+      "type": "java",
+      "name": "Lab4DTestShapes",
+      "request": "launch",
+      "mainClass": "Lab4DTestShapes",
+      "projectName": "bphc-oops_80699a6b"
+    },
+    {
+      "type": "java",
+      "name": "Lab4HZoo",
+      "request": "launch",
+      "mainClass": "Lab4HZoo",
+      "projectName": "bphc-oops_80699a6b"
+    },
+    {
+      "type": "java",
+      "name": "Lab4NEventHandlingApp",
+      "request": "launch",
+      "mainClass": "Lab4NEventHandlingApp",
+      "projectName": "bphc-oops_80699a6b"
+    },
+    {
+      "type": "java",
+      "name": "Lab4TLibraryManagementSystem",
+      "request": "launch",
+      "mainClass": "Lab4TLibraryManagementSystem",
+      "projectName": "bphc-oops_80699a6b"
+    },
+    {
+      "type": "java",
+      "name": "TestFormFibonacci",
+      "request": "launch",
+      "mainClass": "TestFormFibonacci",
+      "projectName": "bphc-oops_80699a6b"
+    }
+  ]
+}
