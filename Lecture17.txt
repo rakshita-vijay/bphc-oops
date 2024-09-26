@@ -1,5 +1,6 @@
 composite: structural design pattern that composes objects into tree-like structures to represent part-whole hierarchies
            helps treat individual objects and object compositions uniformly
+           has an instance of another class in it
 
 decorator: structural design pattern that allows behaviour to be added to individual objects dynamically, without affecting behaviour of other objects from same class
            creates a set of decorator classes - used to wrap concrete components
@@ -27,6 +28,7 @@ flyweight: structural design pattern that provides ways to decrease object count
 
 command: structural design pattern that turns a request into a stand-alone object
          allows parametrization of clients with different requests
+         uses: APIs - gives easy interface to use other services
 
 // ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
 

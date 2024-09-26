@@ -1,0 +1,1 @@
+bridge pattern decouples abstraction and implementation so both can vary independently
