@@ -75,6 +75,14 @@
     },
     {
       "type": "java",
+      "name": "ProductDemo",
+      "request": "launch",
+      "mainClass": "ProductDemo",
+      "projectName": "bphc-oops_80699a6b",
+      "args": "30#Television#200000#31#mobile#200000#32#pendrive#2000"
+    },
+    {
+      "type": "java",
       "name": "TestFormFibonacci",
       "request": "launch",
       "mainClass": "TestFormFibonacci",
