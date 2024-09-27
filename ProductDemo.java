@@ -11,13 +11,32 @@ class ProductDemo {
 
     int ptr = 0;
     for(int index = 0; index < numberOfProducts; index++, ptr += 3) {
-      products.add(new Product(Integer.parseInt(st[ptr]),st[ptr+1],Double.parseDouble(st[ptr+2])));
-      // products[index].search(pid);
+      products.add(new Product(Integer.parseInt(st[ptr]), st[ptr+1], Double.parseDouble(st[ptr+2])));
       // products.get(index).display();
       // System.out.println(Integer.parseInt(st[ptr])  + "," + st[ptr+1] + "," + Double.parseDouble(st[ptr+2]));
-      if (products.get(index).price > Integer.parseInt(st[st.length - 1])) {
+      if (products.get(index).price > Double.parseDouble(st[st.length - 1])) {
         products.get(index).display();
       }
+    }
+
+    System.out.println();
+
+    // searching by productNo
+    int count = -2;
+    for(int index = 0; index < numberOfProducts; index++) {
+      if (products.get(index).getProductNo() == Integer.parseInt(st[st.length - 1])) {
+        count = index;
+      } else {
+        continue;
+      }
+    }
+    // products.search(Double.parseDouble(st[st.length - 1]));
+
+    if (count >= 0) {
+      System.out.println(Double.parseDouble(st[st.length - 1]) + " product number is found at index " + (count + 1) + "\nIt's details are: ");
+    products.get(count).display();
+    } else {
+      System.out.println(Double.parseDouble(st[st.length - 1]) + " product number not found");
     }
 
     System.out.println();
