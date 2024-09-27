@@ -1,0 +1,5 @@
+Array List only:
+
+import java.util.Comparator;
+
+ArrayList.sort(Comparator.comparing(nameOfClass::getterForParameterForWhatToCompare));

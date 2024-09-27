@@ -1,24 +1,25 @@
+import java.time.LocalDate;
 import java.util.Scanner;
-import java.time.*;
 
-public class Lab4XBook extends Lab4VLibraryItem implements Lab4WBorrowable {
-  String author;
+public class Lab4ZDVD extends Lab4VLibraryItem implements Lab4WBorrowable {
+  int duration;
   boolean borrowed = false;
 
   // String borrower;
   // int yearBorrowed;
 
+
   Lab4VLibraryItem.BorrowingHistory borrowingHistory = new Lab4VLibraryItem.BorrowingHistory();
 
-  public Lab4XBook(String title, int year, String author) {
+  public Lab4ZDVD(String title, int year, int duration) {
     this.title = title;
     this.year = year;
-    this.author = author;
+    this.duration = duration;
   }
 
   @Override
-  public void displayInfo(Lab4VLibraryItem libraryItem) {
-    System.out.println("Book title: " + libraryItem.title + "\nYear of publishing: " + libraryItem.year + "\nAuthor name: " + this.author + "\nIs borrowed: " + isBorrowed(this) + ((isBorrowed(this) == true) ? ("\nYear Borrowed: " + borrowingHistory.yearBorrowed) : ("\nYear Returned: " + borrowingHistory.yearReturned)) + "\n");
+  void displayInfo(Lab4VLibraryItem libraryItem) {
+    System.out.println("DVD title: " + libraryItem.title + "\nYear of release: " + libraryItem.year + "\nDuration: " + this.duration + "\nIs borrowed: " + isBorrowed(this) + ((isBorrowed(this) == true) ? ("\nYear Borrowed: " + borrowingHistory.yearBorrowed) : ("\nYear Returned: " + borrowingHistory.yearReturned)) + "\n");
   }
 
   @Override
@@ -26,10 +27,10 @@ public class Lab4XBook extends Lab4VLibraryItem implements Lab4WBorrowable {
     Scanner scan1 = new Scanner(System.in);
 
     if (isBorrowed(libraryItem) == true) {
-      System.out.println("The book has been borrowed by someone else, please choose a different book :( \n");
+      System.out.println("The DVD has been borrowed by someone else, please choose a different DVD :( \n");
     } else {
       this.borrowed = true;
-      System.out.print("The book has been successfully borrowed by: ");
+      System.out.print("The DVD has been successfully borrowed by: ");
       // this.borrower = scan1.nextLine();
       borrowingHistory.borrower = scan1.nextLine();
       System.out.println();
@@ -50,7 +51,7 @@ public class Lab4XBook extends Lab4VLibraryItem implements Lab4WBorrowable {
   public void returnItem(Lab4VLibraryItem libraryItem) {
     if (this.borrowed == true) {
       this.borrowed = false;
-      System.out.println("Thank you for returning the book! \n");
+      System.out.println("Thank you for returning the DVD! \n");
       LocalDate yearReturned = LocalDate.now();
 
       // if ((yearBorrowed + 1) < yearReturned.getYear()) {
@@ -60,7 +61,7 @@ public class Lab4XBook extends Lab4VLibraryItem implements Lab4WBorrowable {
         System.out.println("You have a penalty of " + penalty + " dollars, pay at front desk");
       }
     } else {
-      System.out.println("An unborrowed book cannot be returned, try again later");
+      System.out.println("An unborrowed DVD cannot be returned, try again later");
     }
   }
 
