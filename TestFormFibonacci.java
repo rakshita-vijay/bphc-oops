@@ -5,10 +5,21 @@ public class TestFormFibonacci {
   public static void main(String[] args) {
     Scanner scan = new Scanner(System.in);
 
-    System.out.println("Enter the starting number of the fibonacci series: ");
+    System.out.print("Enter the starting number of the fibonacci series: ");
     int firstElement = scan.nextInt();
-    System.out.println("Enter the final number of the fibonacci series: ");
+    while (firstElement < 0) {
+      System.out.print("Number entered is below zero. Re-enter number: ");
+      firstElement = scan.nextInt();
+    }
+    System.out.println();
+
+    System.out.print("Enter the final number of the fibonacci series: ");
     int lastElement = scan.nextInt();
+    while (lastElement < firstElement) {
+      System.out.print("Number entered is below first element. Re-enter number: ");
+      lastElement = scan.nextInt();
+    }
+    System.out.println();
 
     scan.close();
 

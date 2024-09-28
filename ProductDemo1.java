@@ -1,12 +1,11 @@
 import java.util.ArrayList;
 import java.util.Comparator;
 
-class ProductDemo {
+class ProductDemo1 {
   public static void main(String[] args) {
     String[] st = args[0].split("#");
     int numberOfProducts = st.length/3;
 
-    // Product[] products = new Product[numberOfProducts];
     ArrayList<Product> products = new ArrayList<Product>();
 
     int ptr = 0;
@@ -34,7 +33,7 @@ class ProductDemo {
 
     if (count >= 0) {
       System.out.println(Double.parseDouble(st[st.length - 1]) + " product number is found at index " + (count + 1) + "\nIt's details are: ");
-    products.get(count).display();
+      products.get(count).display();
     } else {
       System.out.println(Double.parseDouble(st[st.length - 1]) + " product number not found");
     }

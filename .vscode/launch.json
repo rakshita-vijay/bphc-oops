@@ -75,11 +75,19 @@
     },
     {
       "type": "java",
-      "name": "ProductDemo",
+      "name": "ProductDemo1",
       "request": "launch",
-      "mainClass": "ProductDemo",
+      "mainClass": "ProductDemo1",
       "projectName": "bphc-oops_80699a6b",
-      "args": "30#Television#200000#31#mobile#200000#32#pendrive#31"
+      "args": "30#Television#2000#31#mobile#200000#32#pendrive#200#31"
+    },
+    {
+      "type": "java",
+      "name": "ProductDemo2",
+      "request": "launch",
+      "mainClass": "ProductDemo2",
+      "projectName": "bphc-oops_80699a6b",
+      "args": "30#Television#2000#31#mobile#200000#32#pendrive#200#31"
     },
     {
       "type": "java",
