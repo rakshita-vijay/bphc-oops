@@ -7,6 +7,7 @@ class ProductDemo1 {
     int numberOfProducts = st.length/3;
 
     ArrayList<Product> products = new ArrayList<Product>();
+    // Product[] prods = new Product[5];
 
     int ptr = 0;
     for(int index = 0; index < numberOfProducts; index++, ptr += 3) {

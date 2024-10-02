@@ -25,7 +25,7 @@ public class Lab4TLibraryManagementSystem {
     dvd1.returnItem(dvd1);
     System.out.println("DVD borrowing status: " + dvd1.isBorrowed(dvd1) + "\n");
 
-    Lab4ULibrary library = new Lab4ULibrary();
-    library.display(library);
+    // Lab4ULibrary library = new Lab4ULibrary();
+    // library.display(library);
   }
 }

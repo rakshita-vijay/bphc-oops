@@ -43,8 +43,8 @@ relationships:
 -------------
 ------ : association
 ------> : navigable association
-------|> : inheritance
-- - - - - -|> : realization / implementation
+------|> : inheritance (extends)
+- - - - - -|> : realization / implementation (implements)
 - - - - - -> : dependency
 ------<> : aggregation
 ------<|> : composition (filled in diamond)
