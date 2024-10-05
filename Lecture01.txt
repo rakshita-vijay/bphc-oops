@@ -6,7 +6,7 @@ code to executable (c++):
 ------------------------
 preprocessing --> compilation --> assembly --> linking --> loading
 
-source code --> include header / expanded code --> assembly language --> machine / object code --> executable code --> runnign program
+source code --> include header / expanded code --> assembly language --> machine / object code --> executable code --> running program
 
 structure: object basics
            has only behaviour
@@ -52,7 +52,7 @@ java is a hybrid of c and python
 
 segmentation fault: memory overflow and accessing memory out-of-bounds
 
-in java, no SegmentationFault. only DivideByZero.
+in java, no SegmentationFault. only DivideByZero
 
 // ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
 

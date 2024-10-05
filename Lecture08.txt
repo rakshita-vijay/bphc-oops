@@ -11,7 +11,7 @@ public static variables - default
 
 // ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
 
-interface to interface - implement
+interface to interface - extends
 interface to class - implement
 class to class - extends
 

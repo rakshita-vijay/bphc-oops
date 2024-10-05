@@ -3,7 +3,7 @@ static fields must be initialized
 
 // ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
 
-FileOutputStream is a child OutputStream
+FileOutputStream is a child of OutputStream
 
 in an interface methods are public by default
 

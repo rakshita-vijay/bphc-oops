@@ -7,4 +7,5 @@ null object: behavioral design pattern, used to provide a consistent way of hand
 creational vs. structural: c:- focus on object creation
                            s:- object composition
 
-structural vs. behavioral: s:-
+structural vs. behavioral: s:- structures the creation
+                           b:- adds behaviour

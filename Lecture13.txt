@@ -9,7 +9,7 @@ plant UML: used to draw big UML very easily
 
 structure diagrams: represents static aspects of the system
                     emphasizes essential aspects of system being modeled
-                    used in documenting software architechture of software systems
+                    used in documenting software architecture of software systems
                     ex: class diagrams
 
 behaviour diagrams: represents dynamic aspects of the system
@@ -43,11 +43,11 @@ relationships:
 -------------
 ------ : association
 ------> : navigable association
-------|> : inheritance (extends)
-- - - - - -|> : realization / implementation (implements)
-- - - - - -> : dependency
-------<> : aggregation
-------<|> : composition (filled in diamond)
+            ------|> : inheritance (extends)
+            - - - - - -|> : realization / implementation (implements)
+            - - - - - -> : dependency
+            ------<> : aggregation
+            ------<|> : composition (filled in diamond)
 
 // ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
 

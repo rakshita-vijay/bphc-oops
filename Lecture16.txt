@@ -10,7 +10,7 @@ adapter: structural pattern that allows the interface of an existing class to be
          it is a single class
          ex: backward adaptability
 
-bridge: structural pattern that allows you to separate the abstraction from implementation, i.e., develpoed independently
+bridge: structural pattern that allows you to separate the abstraction from implementation, i.e., developed independently
         abstraction: interface / abstract class, contains a reference to the implementer
         implementer: interface / abstract class
         use judiciously

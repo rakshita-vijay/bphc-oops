@@ -5,7 +5,7 @@ DPs: not for college-level projects, meant for large-scale
 // ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
 
 subsets of design patterns in software development:
--------------------------------------------------
+--------------------------------------------------
 creational design patterns: make object creation more flexible anad efficient
                             makes system independent
 · factory method
@@ -52,7 +52,7 @@ how much functional, how much present - how much is shown to user? what is its p
 // ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
 
 factory method design pattern (FMDP): type of creational design pattern
-                                      provides an interface for creating objects in superclass
+                                      provides an interface for creating objects from superclass
                                       allows subclasses to alter the type of objects that will be created
                                       encapulates object creation logic in a separate method, promotes loose coupling b/w creator and created
 
@@ -68,7 +68,7 @@ we want: less memory, less computational power
 
 singleton design pattern: simplest DP
                           ensures a class has only one instance, provides a global point of access to it
-                          instance must be axtensible by subclassing, should be able to use extended instance without modifying
+                          instance must be extensible by subclassing, should be able to use extended instance without modifying
                           uses: logging, driving objects, caching, thread pool, DB connections
 
 // ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*

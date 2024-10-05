@@ -1,13 +1,15 @@
-mediator:
+mediator: reduces communication complexity between multiple objects / classes
 
-memento (interpreter): behavioral design pattern used to capture and restore internal object state without exposing implementation details
+memento (interpreter): behavioural design pattern used to capture and restore internal object state without exposing implementation details
                        without violating encapsulation to capture and externalize an object's internal state so that it can be restored later
 
 observer: mostly inbuilt
-          behavioral design pattern that defines a one-to-many dependency between objects so that when one object (subject) changes state, all dependents (observers) are notified and are updated accordingly
+          behavioural design pattern that defines a one-to-many dependency between objects so that when one object (subject) changes state, all dependents (observers) are notified and are updated accordingly
 
-state: observer is the object itself
-       alters behavious when internal state changes
+      state: observer is the object itself
+             alters behaviour when internal state changes
 
 strategy: talking about facade
           depending on need we can go to one of the many implementations
+
+iterator: access objects in sequential order without need to know internal implementation
