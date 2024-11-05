@@ -13,3 +13,5 @@ strategy: talking about facade
           depending on need we can go to one of the many implementations
 
 iterator: access objects in sequential order without need to know internal implementation
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*

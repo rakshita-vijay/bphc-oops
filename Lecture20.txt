@@ -5,3 +5,5 @@ flexibility: python > java
 
 JIT complier: Just In Time
               turns byte code into instructions
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*

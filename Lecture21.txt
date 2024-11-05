@@ -1,0 +1,113 @@
+GUI OS:
+------
+user --> graphical interface --> display server --> kernel --> hardware
+                                        |
+                                        |
+                                        V
+                                  window manager
+
+AWT --> swing --> JavaFX
+
+swing: gui widget toolkit for java
+       part of oracle's java foundation classes (JFC) - an API for providing a GIU for java programs
+
+       provides a more sophesticated set of GUI components than the earlier Abstract Window Toolkit (AWT)
+
+       provides a look and feel that emulates the look and feel of multiple platforms
+
+JavaFX has CSS-kind of styling
+sort of replacing swing
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+Swing MVC (Model View Control):
+------------------------------
+to build a software:
+      a) On what data does it work? (Model)
+      b) What does it look like? (View)
+      c) How does it work? (Controller)
+
+swing is a platform-independent, Model View Controller GUI framework for Java, which follows a single-threaded programming model
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+Swing is a complementary extension of AWT, not a direct replacement
+everything starts with 'J'
+
+              AWT                                      Swing
+A) API to develop GUI apps in Java       A) part of oracle's java foundation classes
+B) components are heavy-weighted         B) components are light-weighted
+C) components are platform dependent     C) components are platform independent
+D) execution time: more than Swing       D) execution time: less than AWT
+E) components require java.awt package   E) components require javax.swing package
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+                  Object
+                    ^
+                    |
+                    |
+                Component
+                    ^
+                    |
+                    |
+                Container
+                    ^
+                    |
+    ----------------|----------------
+    |               |               |
+  Window          Panel        JComponent
+    ^               ^               ^
+    |               |               |                                            ------> JProgressBar
+    |               |               |                                            |
+  Frame           Applet      AbstractButton                                     |-----> JList
+    ^               ^               ^                                            |
+    |               |               |                                            |
+    |               |               |------------------------------------------------------------
+ Jframe          JApplet            |                             |                             |
+                            -----------------                  JLabel                       JComboBox
+                            |               |
+                         JButton      JToggleButton <---------------- JCheckBox
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+Adobe Flash was essential to run YouTube videos
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+swing components:
+----------------
+JButton - can have image and text
+
+JCheckBox - ticked and unticked;
+            multiple options can be clicked at the same time
+
+JRadioButton - only one option clicked at a time
+
+JComboBox - show popup menu of choices;
+            choice selected by user is shown on the top of a menu;
+            inherits JComponent class
+
+JList - represents a list of text items;
+        list of text items can be set up so that the user can choose either one item or multiple items;
+        inherits JComponent class
+
+JSpinner - for separate formats like date, time, etc
+           spins through the possible values
+
+JTextField - allows editing of a single line text
+
+JPasswordField - text component specialized for password entry;
+                 allows the editing of a single line of text;
+                 inherits JTextField class
+
+... (and more next class)
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+Check out on GitHub:
+-------------------
+FlatLaf: material theme - 2D, without shadows
+all extensions are there (Jxxx)
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*

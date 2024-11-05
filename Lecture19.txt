@@ -9,3 +9,5 @@ creational vs. structural: c:- focus on object creation
 
 structural vs. behavioral: s:- structures the creation
                            b:- adds behaviour
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
