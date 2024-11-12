@@ -1,0 +1,74 @@
+swing components:
+----------------
+more available as GitHub projects
+ex.: JInternalFrame, JLayeredPane, RootPane
+
+RootPane is used when you don't want to redraw the entire thing, so the 'glass' planes are given
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+when you want to insert images, use ImageIcon
+
+dynamic buttons - separate listener entity (class)
+
+border layout is WRT other components (south of x, west of y)
+
+grid layout is based on grid size (you enter m*n - rows*columns)
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+PROJECT STUFF:
+-------------
+1) buttons because rendering problem is lesser, change foreground color, background color, etc, use set bounds
+2) rectangles, use repaint so that we can layer stuff on top of layers
+3) one room is a panel, draw stuff over that, drag and drop panels - it will take all components inside it and drop accordingly
+4) explore paint
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+setBounds >> FloorLayout
+
+ActionListener: parent of all Listeners
+implement ActionListener --> register component with Listener --> override the ActionPerformed() method
+1) public class ActionListenerExample Implements ActionListener
+2) component.addActionListener(instanceOfListenerclass);
+3) public void actionPerformed(ActionEvent e) {
+      // Write the code here
+   }
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+.setResizable(false) will not let you resize the screen - window becomes static
+<panel>.setLineWrap(true) - if panel is resized or text size is changed, then line is wrapped regardless
+
+if you want to make a JScrollPane, then make the components of the scroll pane first, and then pass as arguments to the JScrollPane constructor
+
+there are overloaded constructors of the JScrollPane that takes just the panel, nothing else - default
+VERTICAL_SCROLLBAR_ALWAYS AND HORIZONTAL_SCROLLBAR_AS_NEEDED
+
+<thing_to_change_font_of>.getFont().deriveFont(<font_size>);
+
+.getFont().getSize(); - returns the point size of this Font, rounded to an integer
+.getFont().getSize2D() - returns the point size of this Font in float value
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+opening FileChooser:
+-------------------
+JFileChooser j = new JFileChooser(FileSystemView.getFileSystemView());
+FileChooser is OS-dependent (for Mac, it is Finder) - no need to write file path everytime
+
+.showSaveDialog(null) - will come with save and cancel
+.showOpenDialog(null) - will come with open and cancel
+
+if(r == JFileChooser.APPROVE_OPTION) // you have clicked either save or open
+
+getting file path:
+-----------------
+String filePath = j.getSelectedFile().getAbsolutePath();
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+.rowAtPoint() - find row number
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*

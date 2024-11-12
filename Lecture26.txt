@@ -1,0 +1,131 @@
+built-in exceptions:
+-------------------
+1) InterruptedException: thrown when a thread is waiting / sleeping / doing some processing, and it is interrupted
+
+2) NoSuchFieldException: thrown when a class does not contain the field / variable specified (at runtime)
+
+3) NoSuchMethodException: thrown when accessing a method that is not found
+
+4) NullPointerException: raised when referring to the members of a null object
+                         null represents nothing
+                         pointer there, pointer contains nothing (not initialized / freed)
+
+5) NumberFormatException: raised when a method could not convert a string into a numeric format
+
+6) RunTimeException: represents an exception that occurs during runtime
+
+7) StringIndexOutOfBoundException: thrown by String class methods to indicate an index is either (-ve) / > string size
+
+8) IllegalArgumentException: throw error / error statement when the method receives an argument which is not accurately fit to the given relation or condition
+                             comes under the unchecked exception
+
+9) IllegalStateException: using something not allocation for that utilization
+                          throw an error or error message when the method is not accessed for the particular operation in the application
+                          comes under the unchecked exception
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+exceptions are not thrown as errors - they are thrown as warnings
+warning: compiler thinks that there will be a runtime error
+
+'Exception': super class of all exceptions
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+throw: definite throwing of an exception
+throws: possible throwing of an exception
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+control flow in:
+---------------
+1) try-catch clause (or) try-catch-finally clause
+        Case 1: Exception occurs in try block and handled in catch block
+        Case 2: Exception occurs in try block and is not handled in catch block
+        Case 3: Exception doesn’t occur in try block
+   finally always gets executed, regardless of the result of try-catch block
+
+2) try-finally clause
+        Case 1: Exception occurs in try block
+        Case 2: Exception doesn’t occur in try block
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+custom exceptions:
+-----------------
+all the general types of exceptions that may occur in the programming are covered
+
+used to catch and provide specific treatment to a subset of existing Java exceptions
+
+business logic exceptions: exceptions related to business logic and workflow
+                           useful for the application users or the developers to understand the exact problem
+
+example:
+// A Class that represents user-defined exception
+class MyException extends Exception {
+  public MyException(String s) {
+    // Call constructor of parent Exception
+    super(s);
+    System.out.println("An exceptional case is: " + s);
+  }
+}
+
+example:
+// A class that uses above MyException
+public class MainExcep {
+  // Driver Program
+  public static void main(String args[]) {
+    try {
+      // Throw an object of user defined exception
+      throw new MyException("10 GGPA and a social life!");
+    } catch (MyException ex) {
+      System.out.println("Caught");
+      // Print the message from MyException object
+      System.out.println(ex.getMessage());
+    }
+  }
+}
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+chained exceptions:
+------------------
+allows to relate one exception with another exception, i.e., one exception describes the cause of another exception
+
+constructors of 'Throwable' class which support chained exceptions in Java:
+1) Throwable(Throwable cause): where cause is the exception that causes the current exception
+2) Throwable(String msg, Throwable cause): Where 'msg' is the exception message and 'cause' is the exception that causes the current exception
+
+methods of 'Throwable' class which support chained exceptions in Java:
+1) getCause() method: returns the actual cause of an exception
+2) initCause(Throwable cause) method: sets the cause for the calling exception
+
+<exception>.printStackTrace(); - all causing exceptions will be printed
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+null pointer exception:
+----------------------
+NPE: death point of server/code
+even if any exception occurs after, doesn’t matter, won't be shown
+
+certain reasons for NPE:
+1) Invoking a method from a null object
+2) Accessing or modifying a null object's field
+3) Taking the length of null, as if it were an array
+4) Accessing or modifying the slots of null objects, as if it were an array
+5) Throwing null, as if it were a Throwable value
+6) When you try to synchronize over a null object
+
+certain methods to handle NPE:
+1) String comparison with literals
+2) Keeping a check on the arguments of a method
+3) Use of Ternary Operator
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+threading - 3
+file - 2
+collection - 5
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*

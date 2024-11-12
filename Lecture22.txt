@@ -1,0 +1,105 @@
+swing components:
+----------------
+JButton, JCheckBox, JRadioButton, JComboBox, JList, JSpinner, JPasswordField, JMenu, JSlider, JColorChooser, JEditorPane, JTextPane, JFileChooser, JTable, JTextArea (multi-line text), JTextField (single-line text), JTree, JLabel, JProgressBar, JSeparator, JToolTip, JDialog, JFrame, JPanel, JScrollPane, JSplitPane, JTabbedPane, JToolBar
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+(copied from last class)
+
+JButton - can have image and text
+
+JCheckBox - ticked and unticked;
+            multiple options can be clicked at the same time
+
+JRadioButton - only one option clicked at a time
+
+JComboBox - show popup menu of choices;
+            choice selected by user is shown on the top of a menu;
+            inherits JComponent class
+
+JList - represents a list of text items;
+        list of text items can be set up so that the user can choose either one item or multiple items;
+        inherits JComponent class
+
+JSpinner - for separate formats like date, time, etc
+           spins through the possible values
+
+JTextField - allows editing of a single line text
+
+JPasswordField - text component specialized for password entry;
+                 allows the editing of a single line of text;
+                 inherits JTextField class
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+(this class)
+
+JMenu - for application with proper taskbar, drop-down menu, etc
+        put in menu groups, menu items, etc
+        window or frame may have several menus
+        inherits the JMenuItem class
+
+JSlider - analog input: volume control, media player
+          focus order: whether something will always be in focus or if it will never be in focus
+          by mouse or keyboard
+
+JColorChooser - rare, unless paint-like application
+                specific colors, 100s of apps in photoshop / texteditor
+                see and choose colors
+
+JEditorPane - panels inside which you can place multiple other things
+              like a container component
+              panel is a component inside mother component
+
+JTextPane
+
+JFileChooser - helps to choose a file
+
+JTable - used to display tabular data;
+         can select columns, select rows, sorting table, etc
+         when we have record data - data that can be displayed as a set of tuples
+
+JTextArea (multi-line text) - scroll bar will come, and correspondingly, text can be written
+                              can be put inside a table - used with large amount of data
+JTextField (single-line text)
+
+JTree - to give a tree view of files inside directory
+
+JLabel - area where text and image can be given
+
+JProgressBar - like a slider, but cannot be interacted with
+               whatever percentage is coming, it will be rendered in the progress bar
+               rendering needs thread or something
+
+JSeparator - general purpose component for implementing divider lines
+             used to draw a line to separate widgets in a Layout
+
+JToolTip - seen only if slow, if hovered
+           hint shown as to what the thing you are hovering over does
+
+JDialog - pop-up with a yes/no question or cancel option or even just information
+          has text; there are even some in-built dialogues
+
+JFrame - thing into which whatever you are are writing goes in
+
+JPanel - organizational box
+         similar to a div
+
+JScrollPane - scrollable view of a component
+              when screen size is limited, we use a scroll pane to display a large component or a component whose size can change dynamically
+
+JSplitPane - used to divide 2 components based on the look and feel implementation
+             can be resized by the user
+             if minimum size of the 2 components is > split pane size, the divider will not allow you to resize it
+
+             the 2 components in a split pane can be aligned left to right using JSplitPane.HORIZONTAL_SPLIT,
+             or top to bottom using JSplitPane.VERTICAL_SPLIT
+             when user is resizing components, the minimum size of the components is used to determine the maximum/minimum position the components can be set to
+
+JTabbedPane - used to switch between a group of components by clicking on a tab with a given title or icon
+              inherits JComponent class
+
+JToolBar - allows us to group other components, usually buttons with icons in a row or column
+           provides a component which is useful for displaying commonly used actions or controls
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*

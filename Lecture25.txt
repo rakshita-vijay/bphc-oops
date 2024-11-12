@@ -1,0 +1,129 @@
+exceptions in java:
+------------------
+exception: event that occurs during the execution of the program that disrupts the normal flow of the program's instructions
+
+when error occurs in method, it creates an exception object, hands it off to the runtime system
+exception object contains type and state of the programs where the error occurred
+this creation and hand off is called 'throwing an exception'
+
+after the hand off, the runtime system tries to find something to handle the exception
+the set of possible "somethings" to handle the exception is the ordered list of methods that had been called to get the method when the error occurred - this method list is called 'call stack'
+(call stack, during the process of method-where-error-originated collection, tries to handle/solve?/bypass? the error)
+
+runtime system searches call stack for a method that contains a block of code that can handle the exception (called 'exception handler')
+search begins in the method where the error occurred, and iterates through the call stack in reverse order in which the methods were called
+when an appropriate handler is found, the runtime system passess exception to handler
+appropriate if exception thrown mathes the tpe that can be handled by the handler
+
+the exception handler chosen is said to handle the exception
+if runtime system exhaustively searches all methods on the call stack without finding an appropriate handler, then the runtime system and program terminates
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+             |--> method where error occurred
+             |
+method call  |
+             |--- method without exception handler <--|
+                                                      |
+                                                      |  method call
+                |--> method with exception handler ---|
+                |
+   method call  |
+                |--- main
+
+
+            throws exception - method where error occurred      ---|
+                                                                   |  looking for appropriate handler
+                                                                   |
+          forwards exception - method without exception handler <--|
+                                                               \
+                                                                |
+                                                                |
+catches some other exception - method with exception handler <--|
+
+                               (            main            )
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+3 kinds of exceptions:
+---------------------
+1) checked exception: exceptional conditions that a well-written application should anticipate and recover from
+                      subject to catch or specify requirement (can be predicted)
+                      all exceptions are checked exceptions except for Error, Runtime, and their subclasses
+
+2) Error: exceptional conditions that are external to application, which can't anticipate and recover from it
+          not subject to catch or specify requirement
+          depicted / indicated by Error and its subclasses
+
+3) unchecked/runtime exception: exceptional conditions that are internal to the application, which can't anticipate and recover from it
+                                indicate programming bugs / logic error / improper use of API
+                                not subject to catch or specify requirement
+                                depicted / indicated by RuntimeException and its subclasses
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+object --> throwable --|
+                       |--> exceptions --|
+                       |                 |--> checked
+                       |                 |    ex: I/O, compile-time
+                       |                 |
+                       |                 |--> unchecked
+                       |                      ex: NullPointer, run-time
+                       |
+                       |--> Error --|
+                                    |--> Virtual Machine Error
+                                    |--> Assertion Error
+                                    |--> OutOfMemory Error
+                                    |--> Network Failure Error
+                                    |--> Hardware Failure Error
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+error: comes from hardware
+exception: comes from JVM / memory
+
+error at OS level cannot be handled by JVM
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+types of exceptions:
+-------------------
+ |
+ |--> user-defined
+ |
+ |--> built-in --|
+                 |
+                 |--> checked --|
+                 |              |
+                 |              |--> ClassNotFoundException
+                 |              |--> InterruptedException
+                 |              |--> IOException
+                 |              |--> InstantiationException
+                 |              |--> SQLException
+                 |              |--> FileNotFoundException
+                 |
+                 |--> unchecked --|
+                                  |
+                                  |--> ArithmeticException
+                                  |--> ClassCastException
+                                  |--> NullPointerException
+                                  |--> ArrayIndexOutOfBoundsException
+                                  |--> ArrayStoreException
+                                  |--> IllegalThreadStateException
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+built-in exceptions:
+-------------------
+1) ArithmeticException: thrown when an exceptional condition has occurred in an arithmetic operation
+
+2) ArrayIndexOutOfBoundsException: thrown to indicate that array element has been accessed with illegal index
+                                   the index is (-ve) / >= array size
+
+3) ClassNotFoundException: raised when we try to access a class whose definition is not found
+
+4) FileNotFoundException: raised when a file is not accessible or does not open
+
+5) IOException: thrown when an input-output operation has failed or interrupted
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
