@@ -1,0 +1,155 @@
+multithreading and synchronization concepts:
+-------------------------------------------
+OS accomodates multitasking: performing multiple actions simultaneously on the machine
+
+multitasking --|
+               |--> process-based multitasking (multiprocessing)
+               |--> thread-based multitasking
+
+process-based multitasking (multiprocessing):
+--------------------------------------------
+processes are heavyweight
+each process was allocated by a separate memory area
+cost of communication between processes is high
+takes a long time for switching between processes as it involves actions such as loading, saving in registers, updating maps, lists, etc.
+
+number of threads = 2 * number of cores
+
+if a multithreaded process runs on a mutlicore system, then are multiple cores used?
+no. only a single core is used
+
+thread-based multitasking:
+-------------------------
+provided with lightweight nature
+share the same address space
+cost of communication between threads is also low
+
+life cycle of process = life cycle of thread
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+LWPs require fewer resources than HWPs
+share system resources like file handles, sockets, and memory, leading to lower overhead and faster context switching
+
+HWPs require more resources because each process has its own copy of the necessary resources
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+                  new
+                   |                          |---------------------------------> blocked
+                   | start                    |                                      |
+                   |                          | acquiring a lock                     | lock acquired
+                   |                          |                                      |
+                   |                __________|   <----------------------------------|
+                   V                |
+--------------------------------------                                                        waiting for notification
+| runnable <---------------> running |  --------------------------------------------------------------------------------> waiting
+|            active state            |  <------------------------------------------------------------------------------------|
+--------------------------------------                                                         notification acquired
+                   |                |
+                   |                ----------|   <----------------------------------|
+                   |                          |                                      |
+                   | runout method            | waiting for                          | timeout or
+                   |                          | timeout                              | notification
+                   V                          | notification                         | occurred
+               terminated                     |                                      |
+                                              |-------------------------------> time waiting
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+creating a thread --|
+                    |--> extend thread: java can't extend 2 classes
+                    |--> implement runnable
+
+call run function by .start(), NOT by .run()
+
+why do we have 2 methods of creating a thread?
+because in some instances, the class is already extending another class, so it can't extend thread class
+here, it implements runnable
+
+normally, functions don't run parallelly, but if put in threads, the running of the functions overlaps and runs "parallelly"
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+after calling .run(), it goes to runnable state (ready state)
+
+blocked: even though you are legally allowed to get into the process, i am not allowing you to
+
+waiting: letting something sleep
+         if sent a notification, it wakes up
+
+blocked: more restrictive
+waiting: less restrictive
+time waiting: waiting with time out
+              not indefinite waiting
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+creating a thread doesn’t mean the thread is running
+
+life cycle of threads in Java:
+-----------------------------
+new thread: when a new thread is created, it is in the new state and has not yet started to run
+            when a thread lies in the new state, its code is yet to be run and hasn't started to execute
+            an object has just been created
+
+runnable state: thread that is ready to run is moved to a runnable state
+                here, a thread might actually be running or it might be ready to run at any instant of time
+                it is the responsibility of the thread scheduler to give the thread time to run
+
+blocked: thread will be in a blocked state when it is trying to acquire a lock but currently, the lock is acquired by another thread.
+         thread will move from the blocked state to runnable state when it acquires the lock
+         having a lock allows jumping from blocked to runnable state
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+when writing is going on, reading is blocked (ex.: bank accounts)
+r: read
+w: write
+rr: safe
+wr, rw, ww: disaster
+
+critical section: section of code which cannot be accessed by 2 threads parallelly
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+life cycle of threads in Java (continued):
+-----------------------------------------
+waiting state: thread will be in waiting state when it calls the wait() method or join() method
+               will move to the runnable state when another thread notifies it, or that thread will be terminated
+
+               if we have t1.start(), t2.start(), and t2.join(), then this will align t2 after t1 and after t1 is done, t2 begins
+               if timeout is there and if t1 is not done but timeout is done, then t2 will start
+
+timed waiting: thread lies in a timed waiting state when it calls a method with a time-out parameter
+               thread stays in this state until the timeout is completed or until a notification is received
+
+terminated state: thread terminates because of one of the following reasons:
+                  |
+                  |--> because it exits normally
+                  |    happens when code of the thread has been entirely executed by the program
+                  |
+                  |--> because there occurred some unusual event, like segmentation fault or unhandled exception
+
+indeterministic state: unsaved state
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+how to create Java threads?
+--------------------------
+1) by extending Java class Thread:
+   ex.: myThread extends Thread
+   it provides constructors and methods for creating and performing operations on a thread
+
+2) by implementing Runnable interface:
+   ex.: myThread implements Runnable
+   cannot call Runnable.start()
+
+   by implementing the Runnable interface and then creating a thread object out of it
+   we use the following constructors for creating a thread:
+   A) Thread
+   B) Thread(Runnable r)
+   C) Thread(String name)
+   D) Thread(Runnable r, String name)
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*

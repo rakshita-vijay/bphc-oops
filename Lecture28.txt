@@ -1,0 +1,91 @@
+how to create Java threads?
+--------------------------
+
+1) by extending Thread:
+    import java.io.*;
+    import java.util.*;
+
+    public class ThreadTest1 extends Thread {
+      // Initiated run method for Thread
+      public void run() {
+        System.out.println("Thread Started Running...");
+      }
+
+      public static void main(String[] args) {
+        ThreadTest1 t1 = new ThreadTest1();
+        // Invoking Thread using start() method
+        t1.start();
+      }
+    }
+
+2) by implementing Runnable:
+    import java.io.*;
+    import java.util.*;
+
+    public class ThreadTest2 implements Runnable {
+      // method to start Thread
+      public void run() {
+        System.out.println("Thread is Running Successfully");
+      }
+
+      public static void main(String[] args) {
+        ThreadTest2 g1 = new ThreadTest2(); // initializing Thread Object
+        Thread t1 = new Thread(g1);
+        t1.start();
+      }
+    }
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+how parallel running works:
+--------------------------
+main -
+     |
+     |
+     |
+     - t1 and t2 created
+     |
+     |
+     |
+     - t1.sort()
+     |
+     |
+     |
+-----------
+|    |    |
+t2   |    t1
+|   main  |
+|    |    |
+|    |    |
+V    V    V
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+thread priority:
+---------------
+whenever we create a thread, it always has some priority assigned to it
+the priority can either be assigned by the JVM while creating the thread or explicitly by the programmer
+
+Java provides three constants for thread priorities:
+1) public static int NORM_PRIORITY
+2) public static int MIN_PRIORITY (by default)
+3) public static int MAX_PRIORITY
+
+functions used when working with priorities:
+-------------------------------------------
+1) public final int getPriority():
+   java.lang.Thread.getPriority() method
+   returns the priority of the given thread
+
+2) public final void setPriority(int newPriority):
+   java.lang.Thread.setPriority() method
+   changes the priority of thread to the value newPriority
+   throws IllegalArgumentException if value of parameter newPriority goes beyond minimum(1) and maximum(10) limit
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+
+
+
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
