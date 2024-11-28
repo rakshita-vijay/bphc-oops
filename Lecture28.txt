@@ -82,6 +82,23 @@ functions used when working with priorities:
    changes the priority of thread to the value newPriority
    throws IllegalArgumentException if value of parameter newPriority goes beyond minimum(1) and maximum(10) limit
 
+higher priority thread finishes and then only lower priority thread starts
+
+<thread>.setPriority(<integer>);
+<thread>.getPriority();
+
+currently executing thread: Thread.currentThread().getName();
+main thread priority: Thread.currentThread().getPriority();
+                      Thread.currentThread().setPriority(<integer>);
+
+random choosing if all threads have same priority order
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+
+
+
+
 // ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
 
 
