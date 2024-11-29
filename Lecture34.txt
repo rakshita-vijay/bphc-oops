@@ -11,7 +11,7 @@ For example, we saved an object with serialVersionUID = 1L into a file name pers
 
 // ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
 
-
+class files are encoded, NOT encrypted
 
 
 
