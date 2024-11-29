@@ -109,30 +109,34 @@ inbuilt class    contains an
 inside the       object
 Java.io.File
 
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
 reading and writing object files:
 --------------------------------
 Java object serialization is an API provided by Java Library stack as a means to serialize Java objects
 
 serialization: process to convert objects into a writable byte stream
                once converted into a byte-stream, these objects can be written to a file
-               reverse process: de-serialization.
+               reverse process: de-serialization
 
-A Java object is serializable if its class or any of its superclasses implement either the java.io.Serializable interface or its subinterface, java.io.Externalizable.
+Java object is serializable if its class or any of its superclasses implement:
+1) java.io.Serializable interface - widely used
+or
+2) its subinterface, java.io.Externalizable - not used a lot
 
+objects: converted into byte-stream using java.io.ObjectOutputStream
+to enable writing of objects into a file using ObjectOutputStream, class must implement the Serializable interface
 
+reading objects in Java is similar to writing objects using ObjectInputStream
+ObjectInputStream - you read; give file as parameter, without casting; Object class
+ObjectOutputStream - you write; give object as parameter
 
-
-
-
-
-
-
-
-
+on reading objects, the ObjectInputStream directly tries to map all the attributes into the class into which we try to cast the read object
+if it is unable to map the respective object exactly, then it throws a ClassNotFoundException
 
 // ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
 
-
-
+encoded - low level, like a sweeper at google
+encrypted - high level, like a software dev at google
 
 // ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*

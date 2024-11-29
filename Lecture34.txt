@@ -1,0 +1,31 @@
+serial UID:
+----------
+unique ID of serial object
+
+any object/class made serializable is automatically assigned a unique, randomly-generated UID by JVM
+
+the serialVersionUID is something like version number; in short, if we save an object with 1L, we need to provide the same 1L to read the object, else hits an incompatible error.
+
+For example, we saved an object with serialVersionUID = 1L into a file name person.obj. Later we add or delete some fields from the object, and update serialVersionUID to 2L. Now, read the person.obj file and try to convert it back to the modified object; since both serialVersionUID is different, we will hit the invalidClassException.
+
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+
+
+
+
+why is serialization needed?
+---------------------------
+
+
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+
+
+
+
+
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
