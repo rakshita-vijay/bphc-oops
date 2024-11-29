@@ -1,0 +1,33 @@
+producer-consumer problem:
+-------------------------
+AKA bounded-buffer problem
+example of a multi-process synchronization problem
+describes 2 processes, the producer and the consumer, which share a common, fixed-size buffer used as a queue
+
+producer's job: generate data, put it into the buffer, and start again
+consumer: at the same time, it is consuming the data (i.e., removing it from the buffer), one piece at a time
+
+< SEE PICTURE >
+
+< SEE CODE >
+
+buffer size (min) = 2 (1 doesn't make sense)
+
+load = (amount of work produced / amount of work that can be executed)
+load <= 1 (ideally)
+
+ex: assume buffer size = 2
+    if producer produces 2 units in 1 second and
+       consumer consumes 1 unit in 1 second
+    then at the end of 2 seconds, 2 units will be left
+    thus, buffer is full
+    now, producer waits until it is notified that buffer is not full to produce more
+                              or is notified that consumer has consumed some amount
+
+what if multiple producers? if one producer is told to wait, then another might take its place?
+all producers are producing to the same buffer, all consumers are consuming from the same buffer
+java doesn't have any method to tackle this. users do
+
+n users in a server, n threads
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*

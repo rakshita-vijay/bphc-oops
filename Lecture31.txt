@@ -1,0 +1,92 @@
+input / output streams, files, object serialization:
+---------------------------------------------------
+Java IO:
+-------
+io package
+streams support all types of objects, data-types, characters, files, etc., to fully execute the I/O operations
+
+          input stream                         output stream
+source ------------------> java application ------------------> destination
+              READ                                 WRITE
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+3 components:
+------------
+1) System.in: standard input stream that is used to read characters from the keyboard or any other standard input device
+2) System.out: standard output stream that is used to produce the result of a program on an output device like the computer screen
+3) System.err: standard error stream that is used to output all the error data that a program might throw, on a computer screen or any standard output device
+
+System.out and System.err uses:
+A) println()
+B) print()
+C) printf() - formatted
+
+                      System.in
+                          |
+                          | keyboard
+                          |
+                          V
+                       Program
+                          |
+                          |
+              screen      |      screen
+            -----------------------------
+            |                           |
+            V                           V
+        System.out                  System.err
+
+console output takes longer to render because of the pixels and translation onto the screen
+writing onto a file is faster
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+types of input streams:
+---------------------
+     |--> FileInputStream
+     |--> ByteArrayInputStream
+     |--> PipedInputStream
+     |--> ObjectInputStream
+     |
+InputStream
+     |                        |--> DataInputStream
+     |--> FilterInputStream --|--> PushBackInputStream
+                              |--> BufferedInputStream
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+types of output streams:
+---------------------
+     |--> FileOutputStream
+     |--> ByteArrayOutputStream
+     |--> PipedOutputStream
+     |--> ObjectOutputStream
+     |
+OutputStream
+     |                         |--> DataOutputStream
+     |--> FilterOutputStream --|--> PushBackOutputStream
+                               |--> BufferedOutputStream
+
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+types of streams [as per file types] : <SEE PICTURE>
+
+BufferedInputStream, BufferedOutputStream, FileInputStream, FileOutputStream - most important
+
+best performance efficiency: Buffered___Stream
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+byte stream code : <SEE CODE>
+
+java reads as int only, not byte
+
+(sourceStream != null) - basically checks if sourceStream is open or not
+                         true when sourceStream is open
+
+-1 : EOF (end of file) character
+
+no parallel reading-writing
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*

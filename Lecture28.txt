@@ -95,14 +95,95 @@ random choosing if all threads have same priority order
 
 // ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
 
+Java main thread:
+----------------
+when a Java program starts up, one thread begins running immediately
+usually called the main thread of our program
+because it is the one that is executed when our program begins
 
+properties:
+----------
+thread from which other child threads will be spawned
+often, it must be the last thread to finish execution because it performs various shutdown actions
 
+zombie threads: threads who still exist in memory but are not associated with any parent cause parent thread: deleted
+                main thread is killed, child thread not killed
 
+Main Thread (Started by JVM for each program)
+  Spawns Child Thread A
+    Child Thread A spawns Child Thread C
+  Spawns Child Thread B
+JVM also starts Other Daemon Threads (e.g., Garbage Collector).
+
+                                  JVM
+                        start      |      start
+                  -----------------------------------
+                  |                                 |
+                  |                                 |
+                  V                                 V
+            main thread                    other daemon threads
+                  |                      (ex.: garbage collector)
+        ---------------------
+        |                   |
+  start |                   | start
+        |                   |
+        V                   V
+  child thread A      child thread B
+        |
+        |
+        |
+        V
+  child thread C
 
 // ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
 
+role of start() function:
+------------------------
+when function called, these take place:
+1) arguments are evaluated
+2) new stack frame is pushed into the call stack
+3) parameters are initialized
+4) method body is executed
 
+after execution:
+1) value is returned
+2) current stack frame is popped from the call stack
 
+purpose of start():
+------------------
+start() makes the ground for run()
+start() method creates a separate call stack for the thread
+a new call stack is created, and then run() method is invoked by JVM
 
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+            Thread.start()                         Thread.run()
+               start()                                run()
+1) Creates a new thread, and the         1) No new thread is created, and
+   run() method is executed on the          the run() method is executed on
+   newly created thread.	                  the calling thread itself.
+2) Can’t be invoked more than once; 	   2) Multiple invocations are
+   otherwise, throws                        possible.
+   java.lang.IllegalStateException.
+3) Defined in java.lang.Thread class.	   3) Defined in java.lang.Runnable
+   Have to implement because it is an       interface and must be overridden
+   abstract function                        in the implementing class.
+                                         4) will not even let it know that
+                                            it is a thread, even though
+                                            Thread class is extended
+                                         5) run() is legal, not valid
+
+only if you have an explicit exception can you use an exception handler, managed by JVM
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+garbage collector:
+for all t in pool
+  if (tEntry == 0)
+    t --> null
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+producer consumer problem: in general, rate of production < rate of consumption (ideally)
 
 // ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*

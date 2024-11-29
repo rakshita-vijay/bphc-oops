@@ -1,0 +1,177 @@
+Thread.sleep() method:
+---------------------
+whenever the Thread.sleep() function executes, it always pauses the current thread execution - inside execution cycle
+if any other thread interrupts the thread when it is sleeping, an InterruptedException will be thrown
+if the system is busy, the actual time the thread sleeps will be longer than the specified time. Conversely, if the system is under a lighter load, the actual sleep time will be closer to the specified duration
+
+with .yield(), you can interrupt a sleeping thread
+
+don't use sleep. better to use wait and notify - gives control to java's thread manager
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+4 variations:
+------------
+1) public static void sleep(long millis) throws InterruptedException
+   Causes the current thread to pause execution for the specified number of milliseconds.
+   Throws InterruptedException if the thread is interrupted while sleeping.
+
+2) public static void sleep(long millis) throws IllegalArgumentException
+   Throws IllegalArgumentException if the argument millis is negative.
+
+3) public static void sleep(long millis, int nanos) throws InterruptedException
+   Pauses the thread for millis milliseconds and an additional nanos nanoseconds.
+   Throws InterruptedException if the thread is interrupted.
+
+4) public static void sleep(long millis, int nanos) throws IllegalArgumentException
+   Throws IllegalArgumentException if millis is negative or nanos is out of range (<0 or >=1,000,000).
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+daemon threads:
+--------------
+background threads
+low-priority threads that run in bg to perform tasks like garbage collection or provide services to user threads
+life of a daemon thread depends on the mercy of user threads, meaning that when all user threads finish their execution, JVM automatically terminates the daemon thread
+
+least secure thread
+daemon thread should not have permission to access major things
+
+methods are:
+1) void setDaemon(boolean status) throws
+2) IllegalThreadStateException: if only this thread is active
+3) SecurityException: if the current thread cannot modify this thread
+
+if JVM has option to kill user thread or daemon thread, then it will always kill daemon thread
+
+kill bg threads
+ex.: notifications
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+properties of daemon thread:
+---------------------------
+1) no preventing JVM exit:
+   daemon threads cannot prevent the JVM from exiting when all user threads finish their execution
+   if all user threads complete their tasks, the JVM terminates itself, regardless of whether any daemon threads are running
+
+2) automatic termination:
+   if the JVM detects a running daemon thread, it terminates the thread and subsequently shuts it down
+   JVM does not check if the daemon thread is actively running; it terminates it regardless
+
+3) low priority:
+   daemon threads have the lowest priority among all threads in Java
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+daemon vs. user threads:
+-----------------------
+priority:
+when only daemon threads remain in a process, JVM exits
+there is no need for a daemon thread to provide a service to another thread
+
+usage:
+daemon threads are primarily used to provide background support to user threads
+they handle tasks that support the main execution without interfering with the user’s operations
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+reference to heap is kept in stack
+stuff to put in RAM is kept in heap
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+synchronization:
+---------------
+used to make sure that only one thread can access the resource at a given point in time
+
+a synchronized block in Java is synchronized on some object
+all synchronized blocks synchronize on the same object and can only have one thread executed inside them at a time
+all other threads attempting to enter the synchronized block are blocked until the thread inside the synchronized block exits the block
+
+synchronized method
+         ^
+         |
+         | locked by thread 1      _______ all threads waiting for lock _______
+         |                         |                                          |
+      thread 1                     thread 2    thread 3    thread 4    thread 5
+
+built using locks or monitor - an object that is used as a mutually exclusive lock
+only a single thread at a time has the right to own a monitor
+
+when a thread gets a lock then all other threads which are trying to acquire the locked monitor will get suspended
+other threads are said to be waiting for the monitor, until the first thread exits the monitor
+
+when a thread request a resource then that resource gets locked so that no other thread can work or do any modification until the resource gets released
+
+two ways of synchronization:
+---------------------------
+1) mutual exclusive:
+   while sharing any resource, this will keep the thread interfering with one another, i.e., mutual exclusive. We can achieve this via:
+   A) synchronized method
+   B) synchronized block
+   C) static synchronization
+
+2) inter thread communication
+
+1A) synchronized public void <_ _ _> - thread 1 will run, then 2, etc
+
+    class PrintTest {
+      synchronized public static void printThread(int n) {
+        for (int i = 1; i <= 10; i++) {
+          System.out.println("Thread " + n + " is working...");
+        }
+        System.out.println("-----------------------");
+      }
+    }
+
+    class Thread1 extends Thread {
+      public void run() {
+        PrintTest.printThread(1);
+      }
+    }
+
+    class Thread2 extends Thread {
+      public void run() {
+        PrintTest.printThread(2);
+      }
+    }
+
+    public class SynchroTest2 {
+      public static void main(String[] args) {
+        Thread1 t1 = new Thread1();
+        Thread2 t2 = new Thread2();
+
+        t1.start();
+        t2.start();
+      }
+    }
+
+1B) class PrintTest extends Thread {
+      // synchronized Code
+      public void printThread(int n) {
+        synchronized (this) {
+          for (int i = 1; i <= 10; i++) {
+            System.out.println("Thread " + n + " is working...");
+          }
+          System.out.println("-------------------------");
+        }
+      }
+    }
+
+1C) class PrintTest {
+      synchronized public static void printThread(int n) {
+        for (int i = 1; i <= 10; i++) {
+          System.out.println("Thread " + n + " is working...");
+        }
+        System.out.println("-------------------------");
+      }
+    }
+
+    class Thread1 extends Thread {
+      public void run() {
+        PrintTest.printThread(n: 1);
+      }
+    }
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*

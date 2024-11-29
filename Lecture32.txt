@@ -1,0 +1,92 @@
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+byte:
+----
+1) BufferedInputStream: used for Buffered Input Stream
+2) DataInputStream: contains methods for reading Java standard datatypes
+3) FileInputStream: used to read from a file
+4) InputStream: abstract class that describes stream input
+
+1) PrintStream: contains the most used print() and println() methods
+2) BufferedOutputStream: used for Buffered Output Stream
+3) DataOutputStream: contains methods for writing Java standard data types
+4) FileOutputStream: used to write to a file
+5) OutputStream: abstract class that describes stream output
+
+character:
+---------
+BufferedReader: used to handle buffered input stream
+FileReader: input stream that reads from a file
+InputStreamReader: used to translate byte to character
+OutputStreamReader: used to translate character to byte
+
+Reader: an abstract class that defines character stream input
+PrintWriter: contains the most used print() and println() methods
+Writer: an abstract class that defines character stream output
+BufferedWriter: used to handle buffered output stream
+FileWriter: used to output a stream that writes to a file
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+syntax:
+------
+FileInputStream <ip_stream_name> = new FileInputStream("<file_name_with_extension_after_dot>");
+FileOutputStream <op_stream_name> = new FileOutputStream("<file_name_with_extension_after_dot>");
+
+<ip_stream_name>.read()
+<op_stream_name>.write((explicit conversion type) var)
+
+<stream_name>.close()
+or
+<stream_name> = NULL
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+just overwriting, not appending
+
+read or write: character by character,
+               line by line, or
+               buffer by buffer
+
+automatically pointer gets shifted to the next byte
+no need for ++
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+character file sample code: <SEE CODE>
+
+use byte file if you don't know the type of file
+else, character
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+Buffered Output Stream:
+----------------------
+implemented by Java.io.BufferedOutputStream class
+an application can write bytes to the underlying output stream without necessarily causing a call to the underlying system for each byte written
+
+fields:
+------
+protected byte[] buf: the internal buffer where data is stored
+protected long count: the number of valid bytes in the buffer
+                      how many bytes you want to write to the buffer at any one point of time
+
+reading and writing in terms of buffer, not character
+file copy - irrespective of character or non-character - then definitely byte
+
+question: have a picture, use character to read it - what problems can happen?
+answer: if there are odd number of bytes, then because it read 2-by-2, the last byte will pose a problem
+
+constructors:
+------------
+BufferedOutputStream(OutputStream out): creates a new buffered output stream to write data to the specified underlying output stream
+BufferedOutputStream(OutputStream out, int size): creates a new buffered output stream to write data to the specified underlying output stream with the specified buffer size
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+<buffer>.flush() - entire buffer written at once
+
+System.nanoTime(); - find the number of nanoseconds the system has run for the program until that point
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*

@@ -1,0 +1,138 @@
+file paths:
+----------
+terminal paths - mostly files, sometimes empty directories
+
+because file and directory names have different formats on different platforms, a simple string is not adequate to name them - sometimes directories has extensions
+
+Java File class is java's representation of a file or directory pathname
+contains several methods for working with pathname, deleting and renaming files, creating new directories, listing the contents of a directory, and determining several common attributes of files and directories
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+constructors:
+------------
+1) File(File parent, String child): creates a new File instance from a parent abstract pathname and a child pathname string
+2) File(String pathame): creates a new File instance by converting the given pathname string into an abstract pathname
+
+3) File(String parent, String child): creates a new File instance from a parent pathname string and a child pathname string
+4) File(URI uri): Creates a new File instance by converting the given file URI into an abstract pathname.
+
+URL is a bit more powerful that URI (Uniform Resource Identifier)
+URI: identifies resources
+URL: identifies resources + how to access it
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+directory contains pointers to other directories/files
+it stores the metadata of file names only, not file content
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+file properties and methods that can be used on it:
+--------------------------------------------------
+
+<SEE CODE>
+
+1) f.getName() - gives the last part/location of the string passed to the File new function
+                 returns the name of the file or directory denoted by this abstract pathname
+                 returns String
+
+2) f.getPath() - gives the same string passed to the File new function
+                 returns String
+
+3) f.getAbsolutePath() - from the system, entire history, including the entirety of string passed
+                         returns String
+
+4) f.getParent() - checks if there are any parents in string entered by user
+                   omits the last part/location of string passed, if there are parents
+                   returns String
+
+5) f.exists() - does not create a few file, rather it checks if the file already exists
+                returns boolean
+
+6) f.canWrite() & f.canRead() - checks if there are no restrictions placed on reading from & writing to the file
+                                returns boolean
+
+7A) f.isDirectory() - tests whether the file denoted by pathname passed is a directory
+                      returns boolean
+
+7B) f.isFile() - tests whether the file denoted by abstract pathname passed is a normal file
+                 returns boolean
+
+8) f.length() - length of file, each item is a byte
+                returns long
+
+9) canExecute() - tests whether the application can execute the file denoted by this abstract pathname
+                  returns boolean
+
+10)	compareTo(File pathname) - compares two abstract pathnames lexicographically
+                               that is, it compares file path names, doesn't compare file content
+                               returns int
+
+11) createNewFile() - atomically creates a new, empty file named by this abstract pathname
+                      returns boolean
+
+12)	delete() - deletes the file or directory denoted by this abstract pathname
+               returns boolean
+
+13) list() - returns an array of strings naming the files and directories in the directory
+             not absolute path, it is relative to the directory passed
+             returns String[]
+
+14) getFreeSpace() - returns the number of unallocated bytes in the partition
+                     retuns long
+
+15) isHidden() - tests whether the file named by abstract pathname passed is a hidden file
+                 retuns boolean
+
+16) listFiles() - returns an array of abstract pathnames denoting the files in the directory
+                  retuns File[]
+
+17) mkdir() - creates the directory named by this abstract pathname
+              retuns boolean (T if created, F if unable to create)
+
+18) renameTo(File dest) - renames the file denoted by this abstract pathname
+                          renamed to dest
+                          retuns boolean
+
+19) setExecutable(boolean executable) - convenience method to set the owner's execute permission
+                                        retuns boolean
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+ file object != object file
+      |              |
+      |              |
+      V              V
+file is an       file which
+inbuilt class    contains an
+inside the       object
+Java.io.File
+
+reading and writing object files:
+--------------------------------
+Java object serialization is an API provided by Java Library stack as a means to serialize Java objects
+
+serialization: process to convert objects into a writable byte stream
+               once converted into a byte-stream, these objects can be written to a file
+               reverse process: de-serialization.
+
+A Java object is serializable if its class or any of its superclasses implement either the java.io.Serializable interface or its subinterface, java.io.Externalizable.
+
+
+
+
+
+
+
+
+
+
+
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+
+
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
