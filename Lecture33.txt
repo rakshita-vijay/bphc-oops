@@ -137,6 +137,6 @@ if it is unable to map the respective object exactly, then it throws a ClassNotF
 // ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
 
 encoded - low level, like a sweeper at google
-encrypted - high level, like a software dev at google
+encrypted - high level, like a software dev at Google
 
 // ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*

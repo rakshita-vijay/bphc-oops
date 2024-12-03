@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Lab6BTransactionProcessor {
+class Lab6BTransactionProcessor {
   double balance;
 
   public Lab6BTransactionProcessor(double initialAmount) {
@@ -10,13 +10,14 @@ public class Lab6BTransactionProcessor {
   public void processTransaction(double transactionAmount) {
     try {
       if (transactionAmount < 0) {
-        throw Lab6CNegativeAmountException("Transaction amount cannot be negative.");
+        throw new Lab6CNegativeAmountException("Transaction amount cannot be negative.");
       } else if (transactionAmount > balance) {
-        throw Lab6DInsufficientBalanceException("Insufficient balance. Transaction declined.");
+        throw new Lab6DInsufficientBalanceException("Insufficient balance. Transaction declined.");
       }
       balance -= transactionAmount;
-    } catch (Lab6CNegativeAmountException || Lab6DInsufficientBalanceException errorThrown) {
-      System.out.println(errorThrown);
+    } catch (Lab6CNegativeAmountException | Lab6DInsufficientBalanceException errorThrown) {
+      System.out.println(errorThrown.getMessage());
+      // errorThrown.toPrint();
     } catch (Exception ex) {
       System.out.println("An unexpected error occurred. Please try again later.");
     }

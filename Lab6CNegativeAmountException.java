@@ -1,5 +1,5 @@
-public class Lab6CNegativeAmountException {
+class Lab6CNegativeAmountException extends Exception {
   public Lab6CNegativeAmountException(String msg) {
-    System.out.println(msg);
+    super(msg);
   }
 }

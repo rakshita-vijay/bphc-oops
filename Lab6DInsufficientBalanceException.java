@@ -1,5 +1,5 @@
-public class Lab6DInsufficientBalanceException {
+class Lab6DInsufficientBalanceException extends Exception {
   public Lab6DInsufficientBalanceException(String msg) {
-    System.out.println(msg);
+    super(msg);
   }
 }

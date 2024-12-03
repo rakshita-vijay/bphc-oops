@@ -7,11 +7,11 @@ public class Lecture31AByteStream {
     FileInputStream sourceStream = null;
     FileOutputStream targetStream = null;
     long byteCount = 0;
+
     try {
       sourceStream = new FileInputStream("alanturing.webp");
       targetStream = new FileOutputStream("fatherOfAI.webp");
-      // Reading source file and writing
-      // content to target file byte by byte
+
       int temp;
       while ((temp = sourceStream.read()) != -1) {
         targetStream.write((byte) temp);
