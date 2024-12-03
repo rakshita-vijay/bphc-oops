@@ -69,19 +69,35 @@ that is, it need not be user-defined, but it should exist and be used
 
 before the Collection Framework (or before JDK 1.2) was introduced, the standard methods for grouping Java objects (or collections) were Arrays, or Vectors, or Hashtables
 
+better to write: List<> = new ArrayList<>();
+pointer of superclass, object of subclass
 
+Collections Framework Hierarchy: <SEE PICTURE>
+interfaces - green
+classes - grey
 
+roots: collection, map
 
+set: elements can't be repeated
 
+queue: ordered elements, and guiding how things will the added and removed
+       follows FIFO
 
+vector: dynamic table
+        malloc, calloc --> realloc
 
+key-value pair: map
+if not, set: hash or normal
+
+hashset: keys are unique
+         keys can be taken from value itself or it can be assigned by user
+         automatically calculated (???? controversial info????)
+
+hashmap: keys assigned by user
 
 // ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
 
 
 
 
-
-
-
-// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+(LEC IS DONE, START WITH NEXT)
