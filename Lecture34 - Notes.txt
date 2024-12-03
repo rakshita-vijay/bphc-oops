@@ -95,6 +95,8 @@ hashset: keys are unique
 
 hashmap: keys assigned by user
 
+keys: (ki != kj) where (i != j)
+
 // ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
 
 
