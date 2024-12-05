@@ -8,7 +8,7 @@ final class: declared using 'final'
 abstract class: to make generalized classes
                 declared using 'abstract'
 
-                template, loose coupling, code reusability, code reusability, abstraction, dynamic resolution
+                template, loose coupling, code reusability, abstraction, dynamic resolution
                 loose coupling - more paths to take by user
 
                 cannot create instance of abstract class, it can be a subclass
@@ -38,7 +38,7 @@ singleton class: has only an object at a time;
                  if second instance is to be implemented, it points to the first;
                  controls access while dealing with database connection and socket programming
 
-                            socket programming: way of connecting two nodes on a network to communicate with each other
+                    socket programming: way of connecting two nodes on a network to communicate with each other
 
                  how to create sc? : create a private constructor
                                      create a static method that returns the object of the sc

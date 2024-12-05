@@ -2,7 +2,7 @@ private constructor: used to realize the concept of singleton class
 
 inherited stuff cannot be more restrictive
 we can increase the scope, but we can't reduce it
-                    (a secret can be shared with more people, but we cannot reduce the number of people who know)
+      (a secret can be shared with more people, but we cannot reduce the number of people who know)
 
 // ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
 

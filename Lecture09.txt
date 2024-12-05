@@ -11,8 +11,8 @@ ArrayList<A> listA = new ArrayList<A>();
 
 listA.at(&index); - jumps to index
 
-if(listA.hasNext) {
-  listA.next;
+if(listA.hasNext()) {
+  listA.next();
 }
 
 // ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
