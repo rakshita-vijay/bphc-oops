@@ -111,6 +111,9 @@ types of exceptions:
                                   |--> ArrayStoreException
                                   |--> IllegalThreadStateException
 
+// CHECKED EXCEPTION HAS TO BE CAUGHT
+// UNCHECKED EXCEPTION NEED NOT BE CAUGHT. UP TO WRITER TO CATCH OR NOT
+
 // ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
 
 built-in exceptions:

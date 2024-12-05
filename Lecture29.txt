@@ -13,18 +13,18 @@ don't use sleep. better to use wait and notify - gives control to java's thread 
 4 variations:
 ------------
 1) public static void sleep(long millis) throws InterruptedException
-   Causes the current thread to pause execution for the specified number of milliseconds.
-   Throws InterruptedException if the thread is interrupted while sleeping.
+   Causes the current thread to pause execution for the specified number of milliseconds
+   Throws InterruptedException if the thread is interrupted while sleeping
 
 2) public static void sleep(long millis) throws IllegalArgumentException
-   Throws IllegalArgumentException if the argument millis is negative.
+   Throws IllegalArgumentException if the argument millis is negative
 
 3) public static void sleep(long millis, int nanos) throws InterruptedException
-   Pauses the thread for millis milliseconds and an additional nanos nanoseconds.
-   Throws InterruptedException if the thread is interrupted.
+   Pauses the thread for millis milliseconds and an additional nanos nanoseconds
+   Throws InterruptedException if the thread is interrupted
 
 4) public static void sleep(long millis, int nanos) throws IllegalArgumentException
-   Throws IllegalArgumentException if millis is negative or nanos is out of range (<0 or >=1,000,000).
+   Throws IllegalArgumentException if millis is negative or nanos is out of range (<0 or >=1,000,000)
 
 // ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
 
@@ -170,7 +170,7 @@ two ways of synchronization:
 
     class Thread1 extends Thread {
       public void run() {
-        PrintTest.printThread(n: 1);
+        PrintTest.printThread(1);
       }
     }
 

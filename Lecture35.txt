@@ -1,25 +1,153 @@
+benefits of collections:
+-----------------------
+1) providing data structures and algorithms so it doesn't need to be user defined
 
+2) increases performance - provides high-performance implementations of data structures and algorithms
+because the various implementations of each interface are interchangeable, programs can be tuned by switching implementations
 
+3) provides interoperability between unrelated APIs by establishing a common language to pass collections back and forth
 
+4) reduces the effort required to learn APIs by requiring you to learn multiple ad hoc collection APIs
 
+5) reduces the effort required to design and implement APIs by not requiring you to produce ad hoc collections APIs
 
-
-
+6) fosters software reuse by providing a standard interface for collections and algorithms with which to manipulate them
 
 // ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
 
+framework consists of:
+---------------------
+1) Collection interfaces: represent different types of collections, such as sets, lists, and maps
+                          form the basis of the framework
 
+2) general-purpose implementations: primary implementations of the collection interfaces
+                                    add properties to already existing things
 
+3) legacy implementations: collection classes from earlier releases, Vector and Hashtable, were retrofitted to implement the collection interfaces
+                           something that allows old systems / versions to use new technology - making them compatible
+                           because new systems might hamper large scale operations
+                           legacy systems to be coupled with new systems
+                           collections provides a bridge - an adapter
 
+4) special-purpose implementations: implementations designed for use in special situations
+                                    they display non-standard performance characteristics, usage restrictions, or behavior
 
+5) concurrent implementations: designed for highly concurrent use - using at the same time
+                               if number of collections is dynamic / unknown
 
+6) wrapper implementations: add functionality, such as synchronization, to other implementations
+
+7) convenience implementations: high-performance "mini-implementations" of the collection interfaces
+
+8) abstract implementations: partial implementations of the collection interfaces to facilitate custom implementations
+                             not very important
+
+9) algorithms: static methods that perform useful functions on collections, such as sorting & searching a list
+
+10) infrastructure: interfaces that provide essential support for the collection interfaces
+
+11) array utilities: utility functions for arrays of primitive types and reference objects
+                     not strictly a part of the collections framework
+                     helps in converting arrays to list
+                     ex.: Comparator - .sort()
 
 // ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
 
+java.util.collection consists of:
+--------------------------------
+java.util.Set
+java.util.SortedSet
+java.util.NavigableSet
+java.util.Queue
+java.util.concurrent.BlockingQueue
+java.util.concurrent.TransferQueue
+java.util.Deque
+java.util.concurrent.BlockingDeque
 
+blocking, transfer: concurrent adaptable collections
+can directly read & write in these queues without taking care of lock - done automatically by collections
 
+java.util.map consists of:
+-------------------------
+java.util.SortedMap
+java.util.NavigableMap
+java.util.concurrent.ConcurrentMap
+java.util.concurrent.ConcurrentNavigableMap
 
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
 
+general purpose of implementation:
+---------------------------------
+classes that implement the collection interfaces have names in form of <Implementation-style><Interface>
 
+Interface      Hash Table      Resizable Array      Balanced Tree      Linked List      Hash Table + Linked List
+   Set           HashSet                               TreeSet                               LinkedHashSet
+   List                           ArrayList                            LinkedList
+  Deque                           ArrayDeque                           LinkedList
+   Map           HashMap                               TreeMap                               LinkedHashMap
+
+hash table: no implementation of list and Dequeue because elements are unique. if list, then restricts functionality
+Resizable Array: needed when lot of elements which have repetitions
+Balanced Tree: we don't want repetitions in a tree
+
+tree like structure + repetitions needed? at node of each tree have a list
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+concurrent aware interfaces:
+---------------------------
+BlockingQueue // most used
+TransferQueue
+BlockingDeque
+ConcurrentMap
+ConcurrentNavigableMap
+
+what is a blocking queue?
+------------------------
+it is a queue that blocks when a thread attempts to perform an operation that cannot be immediately satisfied:
+retrieving an element: a thread will block if it tries to dequeue from an empty queue
+adding an element: a thread will block if it tries to enqueue an item into a full queue
+
+Blocking queues have several methods that handle operations that cannot be satisfied immediately, including:
+Throwing an exception: The method throws an exception if the operation is not possible.
+Returning a special value: The method returns a special value, such as null or false, if the operation is not possible.
+Blocking the current thread: The method blocks the current thread until the operation can be performed.
+Timing out: The method blocks the current thread until the operation can be performed, but only for a given maximum time limit.
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+concurrent aware implementations:
+--------------------------------
+LinkedBlockingQueue
+ArrayBlockingQueue
+PriorityBlockingQueue
+DelayQueue
+SynchronousQueue
+LinkedBlockingDeque
+LinkedTransferQueue
+CopyOnWriteArrayList
+CopyOnWriteArraySet
+ConcurrentSkipListSet
+ConcurrentHashMap
+ConcurrentSkipListMap
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+abstract list family - <SEE PICTURE>
+
+AbstractList: father of all lists
+
+AbstractSequentialList: superclass of LinkedList
+in LinkedList, we usually add elements at the end
+to change this, extend the AbstractSequentialList class and change the add function
+
+LinkedList - mostly used in legacy implementations
+             traversal is slow
+
+go-to: ArrayList or Vector
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+collections are a part of iterable - they have an iterator
 
 // ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*

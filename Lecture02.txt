@@ -39,15 +39,15 @@ abstraction: a need-to-know basis - essential aspects needed to function;
 
 // ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
 
-flexibility / scalability : java better for larger, more complex systems;
-                            encapsulation helps with debugging, but complexity: java > c
+flexibility / scalability: java better for larger, more complex systems;
+                           encapsulation helps with debugging, but complexity: java > c
 
 static: unless you cast, type remains unchanged;
         memory management done by Automatic Garbage Collection (unlike c, where this causes memory leaks)
 
 // ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
 
-Generics in Java not very well implemented.
+Generics in Java not very well implemented
 Fails in handling unsigned integers
 Floating point numbers not well represented (0.7 is the Devil manifested) (All coding languages)
 

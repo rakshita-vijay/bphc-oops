@@ -1,5 +1,3 @@
-// Byte Stream sample
-
 import java.io.*;
 
 public class Lecture31AByteStream {

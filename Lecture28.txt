@@ -1,6 +1,5 @@
 how to create Java threads?
 --------------------------
-
 1) by extending Thread:
     import java.io.*;
     import java.util.*;

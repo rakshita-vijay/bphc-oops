@@ -42,7 +42,7 @@ writing onto a file is faster
 // ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
 
 types of input streams:
----------------------
+----------------------
      |--> FileInputStream
      |--> ByteArrayInputStream
      |--> PipedInputStream
@@ -56,7 +56,7 @@ InputStream
 // ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
 
 types of output streams:
----------------------
+-----------------------
      |--> FileOutputStream
      |--> ByteArrayOutputStream
      |--> PipedOutputStream

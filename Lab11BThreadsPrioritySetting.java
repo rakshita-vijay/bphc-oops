@@ -19,12 +19,12 @@ public class Lab11BThreadsPrioritySetting {
     AA obj1 = new AA();
     BB obj2 = new BB();
     //System.out.println(obj1.getPriority());
-    // obj1.setPriority(1);
+    // obj1.setPriority(10);
     // obj2.setPriority(2);
     obj1.start();
     obj2.start();
-    obj2.join();
-    // obj1.start();
-    // obj2.start();
+
+    // obj1.join();
+    // obj2.join();
   }
 }

@@ -18,7 +18,7 @@ Java NIO basics:
 ---------------
 NIO: New Input/Output
 high-performance networking and file handling
-API and structure which works as an alternative 10 API for Java
+API and structure which works as an alternative IO API for Java
 introduced from JDK 4
 works as the second IO system after standard Java IO with some added advanced features
 
@@ -82,6 +82,7 @@ set: elements can't be repeated
 
 queue: ordered elements, and guiding how things will the added and removed
        follows FIFO
+       dequeueing and enqueueing
 
 vector: dynamic table
         malloc, calloc --> realloc
@@ -97,9 +98,20 @@ hashmap: keys assigned by user
 
 keys: (ki != kj) where (i != j)
 
+ordered set: set, but ordered - natural order sorting or key sorting
+
 // ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
 
+HashSet vs TreeSet:
+------------------
+Structure: HashSet uses a hash table, while TreeSet uses a tree structure
 
+Order: HashSet elements are unordered, while TreeSet elements are sorted
 
+Object comparison: HashSet uses the equals method, while TreeSet uses the compare method
 
-(LEC IS DONE, START WITH NEXT)
+Null objects: HashSet permits null objects, while TreeSet does not
+
+Heterogeneous objects: HashSet does not authorize heterogeneous objects, while TreeSet does
+
+Time complexity: The add, remove, and contains methods of a HashSet have constant time complexity O(1), while the same methods in a TreeSet have time complexity of O(logn)
