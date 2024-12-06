@@ -2,7 +2,7 @@ package diagrams: use packages containing use cases to illustrate functionality 
                   leaves use import
 
 profile diagrams: operates at metamodel level to show stereotypes as classes with <<stereotype>> stereotype,
-                                                  and profiles as pakcages with <<profile>> stereotype
+                                                  and profiles as packages with <<profile>> stereotype
                   packages represent layered architechture of software system
                   dependencies adorned with labels / stereotypes to indicate communication
 

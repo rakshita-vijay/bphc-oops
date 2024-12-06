@@ -1,4 +1,4 @@
-visitor: behavioral design pattern, used to perform an operaion on a group of similar kinds of elements
+visitor: behavioral design pattern, used to perform an operation on a group of similar kinds of elements
 
 null object: behavioral design pattern, used to provide a consistent way of handling null or non-existing objects
              useful in places where you want to avoid explicit null checks and provide default behaviour for objects that may not exist
